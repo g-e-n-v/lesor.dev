@@ -58,10 +58,7 @@ export const Header = ({ className }: HeaderProps) => {
                   />
                 )}
 
-                <Link
-                  href={item.url}
-                  className={cn("z-10", "text-xs hover:text-gray-950", { "text-gray-950": isActiveRoute })}
-                >
+                <Link href={item.url} className={cn("z-10", "hover:text-gray-950", { "text-gray-950": isActiveRoute })}>
                   {item.title}
                 </Link>
               </li>
