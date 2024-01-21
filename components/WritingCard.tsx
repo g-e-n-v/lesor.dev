@@ -26,7 +26,7 @@ export const WritingCard = ({ title, description, tags, publishDate, slug }: Wri
         <div className="w-px grow bg-gray-300" />
       </div>
 
-      <div>
+      <div className="w-full">
         <div className={cn("shrink-0 pb-2 pt-4 text-sm font-semibold text-gray-500", "md:hidden")}>
           {formatShortDate(publishDate)}
         </div>

@@ -6,7 +6,7 @@ import { toJsxRuntime } from "hast-util-to-jsx-runtime";
 import { Fragment, useRef } from "react";
 import { refractor } from "refractor";
 import type { Nodes } from "hast-util-to-jsx-runtime/lib";
-import { OutlineClipboardTextIcon } from "@/assets/icons/OultlineClipboardTextIcon";
+import { OutlineClipboardTextIcon } from "@/assets/icons/OutlineClipboardTextIcon";
 import { cn } from "@/utils/cn.util";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
 import { CODE_LANGUAGE_ICON } from "@/constants/mapping-language-icon.constant";

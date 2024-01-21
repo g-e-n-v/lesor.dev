@@ -3,18 +3,7 @@ import type { PropsWithChildren } from "react";
 
 type TagProps = PropsWithChildren<{ color: string }>;
 
-const getTagStyleClassName = (color: string): string => {
-  switch (color) {
-    case "blue":
-      return `bg-blue-600/10 text-blue-400`;
-
-    case "orange":
-      return `bg-orange-600/10 text-orange-400`;
-
-    default:
-      return `bg-violet-600/10 text-violet-400`;
-  }
-};
+const getTagStyleClassName = (color: string) => `bg-${color}-600/10 text-${color}-400`;
 
 export function Tag({ children, color }: TagProps) {
   return (

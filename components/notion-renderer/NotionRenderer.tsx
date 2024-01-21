@@ -27,14 +27,14 @@ export const NotionRenderer = ({ blocks }: NotionRendererProps) => {
 
       case "heading_1":
         return (
-          <h1 className="mb-8">
+          <h1 className="mb-8 text-3xl">
             <NotionRichText content={block.heading_1.rich_text} />
           </h1>
         );
 
       case "heading_2":
         return (
-          <h2 className="mb-6">
+          <h2 className="mb-6 text-2xl font-semibold">
             <NotionRichText content={block.heading_2.rich_text} />
           </h2>
         );

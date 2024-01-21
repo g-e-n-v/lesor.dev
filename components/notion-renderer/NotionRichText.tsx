@@ -10,10 +10,25 @@ type NotionParagraphProps = {
 export const NotionRichText = ({ content }: NotionParagraphProps) => {
   const texts = content.filter((item) => "text" in item);
 
-  return texts.map(({ plain_text, annotations }, idx) =>
-    createElement(
-      annotations.code ? "code" : "span",
+  return texts.map(({ plain_text, annotations, href }, idx) => {
+    console.log;
+
+    const getElement = () => {
+      if (href) {
+        return "a";
+      }
+
+      if (annotations.code) {
+        return "code";
+      }
+
+      return "span";
+    };
+
+    return createElement(
+      getElement(),
       {
+        ...(href ? { href, target: "_blank" } : {}),
         key: idx,
         className: cn(
           {
@@ -23,11 +38,12 @@ export const NotionRichText = ({ content }: NotionParagraphProps) => {
             "line-through": annotations.strikethrough,
             "bg-neutral-200/50 rounded-md p-1 text-xs font-medium text-blue-500": annotations.code,
             rounded: annotations.color.endsWith("_background"),
+            "underline text-blue-400 font-medium": href,
           },
           TEXT_COLOR_CLASSNAME[annotations.color]
         ),
       },
       plain_text
-    )
-  );
+    );
+  });
 };

@@ -9,11 +9,13 @@ const fontSans = Inconsolata({
   subsets: ["vietnamese", "latin-ext"],
   preload: true,
   variable: "--font-sans",
+  display: "fallback",
 });
 
 const fontMono = Fira_Code({
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "fallback",
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {
