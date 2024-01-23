@@ -32,7 +32,7 @@ export default {
     },
   },
   plugins: [],
-  safelist: ["blue", "orange", "gray", "brown", "yellow", "purple", "green", "red"].reduce(
+  safelist: ["blue", "orange", "gray", "brown", "yellow", "purple", "green", "red", "pink"].reduce(
     (classNames, color) => [
       ...classNames,
       `text-${color}-500`,

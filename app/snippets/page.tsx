@@ -18,10 +18,10 @@ export default async function SnippetsPage() {
           <Link
             href={`/snippets/${snippet.slug}`}
             key={snippet.id}
-            className={cn("rounded-md bg-blue-50 p-4 transition-all", "hover:scale-105")}
+            className={cn("rounded-md bg-neutral-200/30 p-4 transition-all", "hover:scale-105")}
           >
             <div className="mb-2 flex items-center justify-between gap-4">
-              <h1 className="text-lg font-semibold text-gray-700">{getPlainText(snippet.title)}</h1>
+              <h1 className="font-semibold text-gray-700">{getPlainText(snippet.title)}</h1>
               <div className="flex gap-2">
                 {snippet.tags.map((tag) => (
                   <Tag key={tag.name} color={tag.color}>

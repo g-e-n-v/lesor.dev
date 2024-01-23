@@ -30,7 +30,7 @@ export const WritingCard = ({ title, description, tags, publishDate, slug }: Wri
         <div className={cn("shrink-0 pb-2 pt-4 text-sm font-semibold text-gray-500", "md:hidden")}>
           {formatShortDate(publishDate)}
         </div>
-        <div className={cn("mb-6 w-full rounded-md bg-blue-50 p-4 transition-colors", "hover:bg-blue-100/70")}>
+        <div className={cn("mb-6 w-full rounded-xl p-4 transition-all duration-500", "hover:bg-neutral-200/30")}>
           <h1 className="mb-1 text-base font-semibold text-gray-700">{title}</h1>
           <h2 className="mb-3 text-gray-500">{description}</h2>
           <div className="flex gap-1">

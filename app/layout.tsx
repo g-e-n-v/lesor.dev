@@ -21,7 +21,7 @@ const fontMono = Fira_Code({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="vi" className={cn(fontSans.variable, fontMono.variable)}>
-      <body className="bg-gray-50 text-gray-950">
+      <body className="bg-gray-50/50 text-gray-950">
         <Header className="mx-auto max-w-3xl" />
         <main className="mx-auto max-w-3xl px-4">{children}</main>
       </body>
