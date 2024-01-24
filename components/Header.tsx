@@ -45,7 +45,7 @@ export const Header = ({ className }: HeaderProps) => {
           )}
         </div>
 
-        <ul className="flex h-full items-center gap-2">
+        <ul className="flex h-full items-center gap-2 font-mono text-sm tracking-tight">
           {NAV_ITEMS.map((item) => {
             const isActiveRoute = item.title === "home" ? pathname === item.url : pathname.startsWith(item.url);
 

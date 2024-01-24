@@ -2,10 +2,10 @@ import "@/styles/global.css";
 
 import { cn } from "@/utils/cn.util";
 import type { PropsWithChildren } from "react";
-import { Inconsolata, Space_Mono } from "next/font/google";
+import { Inter, Space_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 
-const fontSans = Inconsolata({
+const fontSans = Inter({
   subsets: ["vietnamese", "latin-ext"],
   preload: true,
   variable: "--font-sans",
