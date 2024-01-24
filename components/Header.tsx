@@ -40,7 +40,7 @@ export const Header = ({ className }: HeaderProps) => {
             </div>
           ) : (
             <Link href="/" className="relative aspect-square h-full w-full overflow-hidden bg-blue-200">
-              <Image src={AVATAR_IMAGE} alt="Lê Trung Lực" fill className="object-cover" sizes="200px" />
+              <Image src={AVATAR_IMAGE} alt="Lê Trung Lực" fill className="object-cover" sizes="200px" priority />
             </Link>
           )}
         </div>

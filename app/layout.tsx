@@ -2,7 +2,7 @@ import "@/styles/global.css";
 
 import { cn } from "@/utils/cn.util";
 import type { PropsWithChildren } from "react";
-import { Fira_Code, Inconsolata } from "next/font/google";
+import { Inconsolata, Space_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 
 const fontSans = Inconsolata({
@@ -12,7 +12,8 @@ const fontSans = Inconsolata({
   display: "fallback",
 });
 
-const fontMono = Fira_Code({
+const fontMono = Space_Mono({
+  weight: "400",
   subsets: ["latin"],
   variable: "--font-mono",
   display: "fallback",

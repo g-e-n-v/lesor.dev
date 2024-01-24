@@ -92,7 +92,7 @@ export const getPublishedWritingContentBySlug = async (slug: string) => {
   const writing = await getPublishedWritingBySlug(slug);
 
   if (!writing) {
-    return;
+    return {};
   }
 
   const blocks = await getBlocks(writing.id);

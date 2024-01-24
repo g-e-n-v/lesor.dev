@@ -11,8 +11,6 @@ export const NotionRichText = ({ content }: NotionParagraphProps) => {
   const texts = content.filter((item) => "text" in item);
 
   return texts.map(({ plain_text, annotations, href }, idx) => {
-    console.log;
-
     const getElement = () => {
       if (href) {
         return "a";
