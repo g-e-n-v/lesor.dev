@@ -41,7 +41,7 @@ export const NotionCodeBlock = ({ code }: NotionCodeBlockProps) => {
       <div className="flex items-center rounded-t-lg bg-gray-200 px-4 py-3">
         <div className="flex grow items-center gap-2">
           {Icon && <Icon />}
-          <span className="text-sm text-gray-500">{title}</span>
+          <span className="font-mono text-xs text-gray-500">{title}</span>
         </div>
 
         <ClipboardIcon

@@ -8,8 +8,8 @@ export const NotionImage = ({ image }: NotionImageProps) => {
   const alt = image.caption.map((caption) => caption.plain_text).join(" ");
 
   return (
-    <div className="relative mb-8 w-full overflow-hidden rounded-md pt-[100%]">
-      <Image src={url} alt={alt} sizes="100vw" fill className="object-cover" />
+    <div className="relative mb-8 aspect-video w-full overflow-hidden rounded-md">
+      <Image src={url} alt={alt} sizes="100vw" fill className="object-contain" />
     </div>
   );
 };
