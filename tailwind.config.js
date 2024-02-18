@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin";
+
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
@@ -31,7 +33,18 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".ligatures-normal": {
+          fontVariantLigatures: "normal",
+        },
+        ".ligatures-none": {
+          fontVariantLigatures: "none",
+        },
+      });
+    }),
+  ],
   safelist: ["blue", "orange", "gray", "brown", "yellow", "purple", "green", "red", "pink"].reduce(
     (classNames, color) => [
       ...classNames,

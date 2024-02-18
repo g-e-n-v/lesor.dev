@@ -51,7 +51,7 @@ export const NotionCodeBlock = ({ code }: NotionCodeBlockProps) => {
           onClick={handleCopy}
         />
       </div>
-      <pre className="mb-8 overflow-x-auto rounded-b-lg bg-gray-200/50 p-4">
+      <pre className="mb-8 overflow-x-auto rounded-b-lg bg-gray-200/50 p-4 ligatures-none">
         <code className="text-sm text-gray-700" ref={codeRef}>
           {content}
         </code>

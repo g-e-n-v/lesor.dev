@@ -14,3 +14,7 @@
   @apply bg-slate-200 rounded-full border-4 border-transparent border-solid bg-clip-content;
   @apply hover:bg-slate-300;
 }
+
+.ligatures-none {
+  font-variant-ligatures: none;
+}
