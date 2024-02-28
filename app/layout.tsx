@@ -2,9 +2,9 @@ import "@/styles/global.css";
 
 import { cn } from "@/utils/cn.util";
 import type { PropsWithChildren } from "react";
-import { Inter, Space_Mono } from "next/font/google";
+import { Crimson_Pro, Space_Mono } from "next/font/google";
 
-const fontSans = Inter({
+const fontSans = Crimson_Pro({
   subsets: ["vietnamese", "latin-ext"],
   preload: true,
   variable: "--font-sans",

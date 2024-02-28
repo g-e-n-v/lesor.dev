@@ -31,6 +31,9 @@ export default {
           900: "#3e2723",
         },
       },
+      aspectRatio: {
+        A4: "21 / 29.7",
+      },
     },
   },
   plugins: [

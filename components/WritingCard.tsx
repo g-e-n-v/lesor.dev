@@ -22,7 +22,7 @@ export const WritingCard = ({ title, description, tags, publishDate, slug }: Wri
 
       <div className="mx-4 flex flex-col items-center">
         <div className="h-5 w-px bg-gray-300" />
-        <div className="h-3 w-3 rounded-full border border-solid border-gray-300" />
+        <div className="size-3 rounded-full border border-solid border-gray-300" />
         <div className="w-px grow bg-gray-300" />
       </div>
 

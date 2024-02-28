@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <section className="mt-20">
       <div className="mb-8 flex gap-8">
-        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-solid border-white bg-blue-200 shadow">
+        <div className="relative size-20 shrink-0 overflow-hidden rounded-full border-4 border-solid border-white bg-blue-200 shadow">
           <Image src={AVATAR_IMAGE} alt="Lê Trung Lực" fill className="object-cover" sizes="100vw" priority />
         </div>
         <div className="flex flex-col gap-4">

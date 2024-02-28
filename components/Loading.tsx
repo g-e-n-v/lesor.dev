@@ -10,7 +10,7 @@ export const Loading = ({ className }: LoadingProps) => {
     <div className="flex w-full justify-center">
       <svg
         fill="currentColor"
-        className={cn("h-6 w-6 animate-spin text-blue-300", className)}
+        className={cn("size-6 animate-spin text-blue-300", className)}
         viewBox="0 0 1792 1792"
         xmlns="http://www.w3.org/2000/svg"
       >
