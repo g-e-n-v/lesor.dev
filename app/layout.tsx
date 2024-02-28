@@ -2,12 +2,19 @@ import "@/styles/global.css";
 
 import { cn } from "@/utils/cn.util";
 import type { PropsWithChildren } from "react";
-import { Crimson_Pro, Space_Mono } from "next/font/google";
+import { Lora, Space_Mono, Manrope } from "next/font/google";
 
-const fontSans = Crimson_Pro({
-  subsets: ["vietnamese", "latin-ext"],
+const fontSans = Manrope({
+  subsets: ["latin-ext", "vietnamese"],
   preload: true,
   variable: "--font-sans",
+  display: "fallback",
+});
+
+const fontSerif = Lora({
+  subsets: ["vietnamese", "latin-ext"],
+  preload: true,
+  variable: "--font-serif",
   display: "fallback",
 });
 
@@ -20,7 +27,7 @@ const fontMono = Space_Mono({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="vi" className={cn(fontSans.variable, fontMono.variable)}>
+    <html lang="vi" className={cn(fontSerif.variable, fontSans.variable, fontMono.variable)}>
       <body className="bg-gray-50/50 text-gray-950">{children}</body>
     </html>
   );
