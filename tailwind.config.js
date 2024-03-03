@@ -35,6 +35,13 @@ export default {
       aspectRatio: {
         A4: "21 / 29.7",
       },
+      fontSize: {
+        xs: "10px",
+        sm: "12px",
+        base: "14px",
+        lg: "16px",
+        xl: "18px",
+      },
     },
   },
   plugins: [

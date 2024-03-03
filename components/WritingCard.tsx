@@ -31,8 +31,8 @@ export const WritingCard = ({ title, description, tags, publishDate, slug }: Wri
           {formatShortDate(publishDate)}
         </div>
         <div className={cn("mb-6 w-full rounded-xl p-4 transition-all duration-500", "hover:bg-neutral-200/50")}>
-          <h1 className="mb-1 text-base font-semibold text-gray-700">{title}</h1>
-          <h2 className="mb-3 text-gray-500">{description}</h2>
+          <h1 className="mb-1 font-semibold text-gray-700">{title}</h1>
+          <h2 className="mb-3 text-sm text-gray-500">{description}</h2>
           <div className="flex gap-1">
             {tags.map(({ name, color }) => (
               <Tag key={name} color={color}>

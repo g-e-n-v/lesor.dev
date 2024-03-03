@@ -24,7 +24,7 @@ const BlockRenderer = ({ block }: BlockRendererProps) => {
   switch (block.type) {
     case "paragraph":
       return (
-        <p className="pb-2 text-gray-700">
+        <p className="pb-2 text-gray-950">
           <NotionRichText content={block.paragraph.rich_text} />
         </p>
       );

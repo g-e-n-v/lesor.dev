@@ -40,7 +40,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
 
       <hr className="mb-12 w-1/4" />
 
-      <div className="leading-relaxed tracking-wide">
+      <div className="leading-loose tracking-wide">
         <NotionRenderer blocks={content} />
       </div>
     </div>

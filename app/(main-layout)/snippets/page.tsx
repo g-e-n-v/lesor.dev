@@ -30,7 +30,7 @@ export default async function SnippetsPage() {
                 ))}
               </div>
             </div>
-            <h2 className="text-gray-500">{getPlainText(snippet.description)}</h2>
+            <h2 className="text-sm text-gray-500">{getPlainText(snippet.description)}</h2>
           </Link>
         ))}
       </div>

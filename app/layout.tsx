@@ -1,14 +1,15 @@
 import "@/styles/global.css";
 
 import { cn } from "@/utils/cn.util";
+import { Encode_Sans_Expanded, Lora, Sono } from "next/font/google";
 import type { PropsWithChildren } from "react";
-import { Lora, Space_Mono, Manrope } from "next/font/google";
 
-const fontSans = Manrope({
+const fontSans = Encode_Sans_Expanded({
   subsets: ["latin-ext", "vietnamese"],
   preload: true,
   variable: "--font-sans",
   display: "fallback",
+  weight: ["400", "600", "700"],
 });
 
 const fontSerif = Lora({
@@ -18,7 +19,7 @@ const fontSerif = Lora({
   display: "fallback",
 });
 
-const fontMono = Space_Mono({
+const fontMono = Sono({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-mono",
@@ -28,7 +29,7 @@ const fontMono = Space_Mono({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="vi" className={cn(fontSerif.variable, fontSans.variable, fontMono.variable)}>
-      <body className="bg-gray-50/50 text-gray-950">{children}</body>
+      <body className="bg-gray-50/50 text-base text-gray-950">{children}</body>
     </html>
   );
 }
