@@ -6,6 +6,7 @@ import {
   getPublishedWritings,
 } from "@/services/notion/get-notes.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { cn } from "@/utils/cn.util";
 import { formatShortDate } from "@/utils/dayjs.util";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -35,12 +36,19 @@ export default async function WritingPage({ params }: WritingPageProps) {
           ))}
         </div>
       </div>
-      <h1 className="mb-8 mt-2 text-3xl font-bold text-gray-800">{getPlainText(title)}</h1>
+      <h1
+        className={cn(
+          "mb-8 mt-2 font-mono text-3xl font-bold text-gray-800",
+          "ligatures-none before:text-slate-300 before:content-['#.']"
+        )}
+      >
+        {getPlainText(title)}
+      </h1>
       <p className="mb-6 italic text-gray-500">{getPlainText(description)}</p>
 
       <hr className="mb-12 w-1/4" />
 
-      <div className="leading-loose tracking-wide">
+      <div className="counter-reset leading-loose tracking-wide">
         <NotionRenderer blocks={content} />
       </div>
     </div>

@@ -37,21 +37,21 @@ const BlockRenderer = ({ block }: BlockRendererProps) => {
 
     case "heading_1":
       return (
-        <h1 className="mb-4 mt-12 text-3xl">
+        <h1 className="mb-4 mt-12 font-mono text-3xl">
           <NotionRichText content={block.heading_1.rich_text} />
         </h1>
       );
 
     case "heading_2":
       return (
-        <h2 className="mb-4 mt-12 text-2xl font-semibold">
+        <h2 className="before:counter-inc mb-4 mt-12 font-mono text-2xl font-bold before:text-slate-300">
           <NotionRichText content={block.heading_2.rich_text} />
         </h2>
       );
 
     case "heading_3":
       return (
-        <h3 className="mb-2 mt-4">
+        <h3 className="mb-2 mt-4 font-mono">
           <NotionRichText content={block.heading_3.rich_text} />
         </h3>
       );

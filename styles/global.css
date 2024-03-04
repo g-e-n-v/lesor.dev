@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .ligatures-none {
+    font-variant-ligatures: none;
+  }
+
+  .counter-reset {
+    counter-reset: cnt;
+  }
+
+  .counter-inc {
+    counter-increment: cnt;
+    content: counter(cnt) "." !important;
+  }
+}
+
 ::-webkit-scrollbar {
   @apply w-3 h-3;
 }
@@ -13,8 +28,4 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-slate-200 rounded-full border-4 border-transparent border-solid bg-clip-content;
   @apply hover:bg-slate-300;
-}
-
-.ligatures-none {
-  font-variant-ligatures: none;
 }

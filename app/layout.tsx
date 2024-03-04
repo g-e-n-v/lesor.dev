@@ -9,7 +9,7 @@ const fontSans = Encode_Sans_Expanded({
   preload: true,
   variable: "--font-sans",
   display: "fallback",
-  weight: ["400", "600", "700"],
+  weight: ["400", "600", "700", "900"],
 });
 
 const fontSerif = Lora({
@@ -20,7 +20,7 @@ const fontSerif = Lora({
 });
 
 const fontMono = Sono({
-  weight: "400",
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
   variable: "--font-mono",
   display: "fallback",

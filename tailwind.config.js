@@ -44,18 +44,7 @@ export default {
       },
     },
   },
-  plugins: [
-    plugin(({ addUtilities }) => {
-      addUtilities({
-        ".ligatures-normal": {
-          fontVariantLigatures: "normal",
-        },
-        ".ligatures-none": {
-          fontVariantLigatures: "none",
-        },
-      });
-    }),
-  ],
+  plugins: [],
   safelist: ["blue", "orange", "gray", "brown", "yellow", "purple", "green", "red", "pink"].reduce(
     (classNames, color) => [
       ...classNames,

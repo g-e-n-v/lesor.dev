@@ -1,7 +1,7 @@
+import { TEXT_COLOR_CLASSNAME } from "@/constants/mapping-color.constant";
 import { cn } from "@/utils/cn.util";
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import { createElement } from "react";
-import { TEXT_COLOR_CLASSNAME } from "@/constants/mapping-color.constant";
 
 type NotionParagraphProps = {
   content: Array<RichTextItemResponse>;
