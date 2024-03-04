@@ -6,6 +6,7 @@ import type { ReactHTML } from "react";
 import { createElement, type JSX } from "react";
 
 import "@/styles/code-highlight.css";
+import { getHeadingId } from "@/services/id.service";
 
 const WRAPPER_TAG: Partial<Record<string, keyof ReactHTML>> = {
   bulleted_list_item: "ul",
@@ -44,7 +45,10 @@ const BlockRenderer = ({ block }: BlockRendererProps) => {
 
     case "heading_2":
       return (
-        <h2 className="before:counter-inc mb-4 mt-12 font-mono text-2xl font-bold before:text-slate-300">
+        <h2
+          className="before:counter-inc -mt-16 pb-4 pt-24 font-mono text-2xl font-bold before:text-slate-300"
+          id={getHeadingId(block.heading_2.rich_text)}
+        >
           <NotionRichText content={block.heading_2.rich_text} />
         </h2>
       );
