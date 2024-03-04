@@ -39,7 +39,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
       <h1
         className={cn(
           "mb-8 mt-2 font-mono text-3xl font-bold text-gray-800",
-          "ligatures-none before:text-slate-300 before:content-['#.']"
+          "before:text-slate-300 before:content-['#.']"
         )}
       >
         {getPlainText(title)}

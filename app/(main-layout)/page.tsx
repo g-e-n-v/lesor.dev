@@ -21,9 +21,9 @@ export default function Page() {
         </div>
       </div>
 
-      <p className="font-light text-gray-500">hello, i am a passionate and creative developer from Viet Nam.</p>
+      <p className="font-mono text-gray-500">hello, i am a passionate and creative developer from Viet Nam.</p>
 
-      <p className="font-light text-gray-500">
+      <p className="font-mono text-gray-500">
         welcome to to my space where I share my journey to becoming a better developer.
       </p>
     </section>
