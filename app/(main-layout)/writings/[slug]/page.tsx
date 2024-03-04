@@ -25,7 +25,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
   const { lastEditTime, tags, title, description } = summary;
 
   return (
-    <div className="px-2 pb-12">
+    <div className="px-2 pb-4">
       <div className="mb-1 mt-4 flex items-center gap-4">
         <span className="text-sm font-semibold text-gray-500">{formatShortDate(lastEditTime)}</span>
         <div className="flex gap-2">
