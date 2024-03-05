@@ -7,13 +7,25 @@
     font-variant-ligatures: none;
   }
 
-  .counter-reset {
-    counter-reset: cnt;
+  .paginate {
+    counter-reset: h2 h3;
   }
 
-  .counter-inc {
-    counter-increment: cnt;
-    content: counter(cnt) "." !important;
+  .paginate h2 {
+    counter-reset: h3;
+    counter-increment: h2;
+  }
+
+  .paginate h2::before {
+    content: counter(h2) ". " !important;
+  }
+
+  .paginate h3 {
+    counter-increment: h3;
+  }
+
+  .paginate h3::before {
+    content: counter(h2) "." counter(h3) ". " !important;
   }
 }
 

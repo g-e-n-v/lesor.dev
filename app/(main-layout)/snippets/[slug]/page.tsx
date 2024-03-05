@@ -34,7 +34,7 @@ export default async function SnippetPage({ params }: SnippetPageProps) {
       <h1 className="mb-8 mt-2 font-mono text-3xl font-bold text-gray-800">{getPlainText(title)}</h1>
       <p className="mb-6 italic text-gray-500">{getPlainText(description)}</p>
 
-      <hr className="mb-12 w-1/4" />
+      <hr className="mb-8 w-1/4" />
 
       <NotionRenderer blocks={content} />
     </div>

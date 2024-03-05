@@ -46,9 +46,9 @@ export default async function WritingPage({ params }: WritingPageProps) {
       </h1>
       <p className="mb-6 italic text-gray-500">{getPlainText(description)}</p>
 
-      <hr className="mb-12 w-1/4" />
+      <hr className="mb-8 w-1/4" />
 
-      <div className="counter-reset leading-loose tracking-wide">
+      <div className="paginate leading-loose tracking-wide">
         <NotionRenderer blocks={content} />
       </div>
     </div>

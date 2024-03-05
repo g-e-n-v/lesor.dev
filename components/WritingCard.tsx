@@ -16,7 +16,7 @@ type WritingCardProps = {
 export const WritingCard = ({ title, description, tags, publishDate, slug }: WritingCardProps) => {
   return (
     <Link href={`/writings/${slug}`} className="flex">
-      <div className={cn("hidden shrink-0 py-4 pl-8 text-right text-sm font-semibold text-gray-500", "md:block")}>
+      <div className={cn("hidden w-28 shrink-0 py-4 text-right text-sm font-semibold text-gray-500", "md:block")}>
         {formatShortDate(publishDate)}
       </div>
 
