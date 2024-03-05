@@ -7,26 +7,35 @@
     font-variant-ligatures: none;
   }
 
-  .paginate {
+  .toc-index {
     counter-reset: h2 h3;
   }
 
-  .paginate h2 {
+  .toc-index h2 {
     counter-reset: h3;
     counter-increment: h2;
   }
 
-  .paginate h2::before {
+  .toc-index h2::before {
     content: counter(h2) ". " !important;
   }
 
-  .paginate h3 {
+  .toc-index h3 {
     counter-increment: h3;
   }
 
-  .paginate h3::before {
+  .toc-index h3::before {
     content: counter(h2) "." counter(h3) ". " !important;
   }
+}
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

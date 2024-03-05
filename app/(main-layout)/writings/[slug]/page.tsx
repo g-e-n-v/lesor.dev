@@ -1,3 +1,4 @@
+import { TableOfContent } from "@/components/TableOfContent";
 import { Tag } from "@/components/Tag";
 import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
 import {
@@ -6,6 +7,7 @@ import {
   getPublishedWritings,
 } from "@/services/notion/get-notes.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { getTableOfContent } from "@/services/notion/get-table-of-content.service";
 import { cn } from "@/utils/cn.util";
 import { formatShortDate } from "@/utils/dayjs.util";
 import type { Metadata } from "next";
@@ -23,9 +25,11 @@ export default async function WritingPage({ params }: WritingPageProps) {
   }
 
   const { lastEditTime, tags, title, description } = summary;
+  const toc = getTableOfContent(content);
+  console.log(toc);
 
   return (
-    <div className="px-2 pb-4">
+    <div className="relative px-2 pb-4">
       <div className="mb-1 mt-4 flex items-center gap-4">
         <span className="text-sm font-semibold text-gray-500">{formatShortDate(lastEditTime)}</span>
         <div className="flex gap-2">
@@ -48,8 +52,12 @@ export default async function WritingPage({ params }: WritingPageProps) {
 
       <hr className="mb-8 w-1/4" />
 
-      <div className="paginate leading-loose tracking-wide">
+      <div className="toc-index leading-loose tracking-wide">
         <NotionRenderer blocks={content} />
+      </div>
+
+      <div className="absolute left-full top-0 h-full pl-4">
+        <TableOfContent className="sticky top-44 hidden xl:block" toc={toc} />
       </div>
     </div>
   );
