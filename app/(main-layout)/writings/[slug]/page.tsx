@@ -56,7 +56,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
         <NotionRenderer blocks={content} />
       </div>
 
-      <div className="absolute left-full top-0 h-full pl-4">
+      <div className="absolute left-full top-0 h-full pl-8">
         <TableOfContent className="sticky top-44 hidden xl:block" toc={toc} />
       </div>
     </div>
