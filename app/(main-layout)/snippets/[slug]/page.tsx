@@ -36,7 +36,9 @@ export default async function SnippetPage({ params }: SnippetPageProps) {
 
       <hr className="mb-8 w-1/4" />
 
-      <NotionRenderer blocks={content} />
+      <div className="leading-loose tracking-wide">
+        <NotionRenderer blocks={content} />
+      </div>
     </div>
   );
 }

@@ -12,12 +12,12 @@ export const NotionRichText = ({ content }: NotionParagraphProps) => {
 
   return texts.map(({ plain_text, annotations, href }, idx) => {
     const getElement = () => {
-      if (href) {
-        return "a";
-      }
-
       if (annotations.code) {
         return "code";
+      }
+
+      if (href) {
+        return "a";
       }
 
       return "span";
@@ -34,9 +34,9 @@ export const NotionRichText = ({ content }: NotionParagraphProps) => {
             "font-bold": annotations.bold,
             italic: annotations.italic,
             "line-through": annotations.strikethrough,
-            "bg-neutral-200/50 rounded-md p-1 text-xs font-medium text-blue-500": annotations.code,
+            "bg-neutral-200/50 rounded-md py-0.5 px-1 text-sm font-medium text-blue-500": annotations.code,
             rounded: annotations.color.endsWith("_background"),
-            "underline text-blue-400 font-medium": href,
+            "underline text-blue-400 font-medium cursor-pointer": href,
           },
           TEXT_COLOR_CLASSNAME[annotations.color]
         ),
