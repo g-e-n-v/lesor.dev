@@ -31,6 +31,10 @@ export const TableOfContent = ({ toc, className }: TableOfContentProps) => {
           </li>
         ))}
       </ol>
+
+      <a className="block pt-6 text-sm underline" href="# ">
+        Back to top
+      </a>
     </div>
   );
 };

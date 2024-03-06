@@ -26,7 +26,6 @@ export default async function WritingPage({ params }: WritingPageProps) {
 
   const { lastEditTime, tags, title, description } = summary;
   const toc = getTableOfContent(content);
-  console.log(toc);
 
   return (
     <div className="relative px-2 pb-4">
