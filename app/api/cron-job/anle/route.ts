@@ -8,8 +8,8 @@ import { sample } from "lodash-es";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const LESOR_CHAT_ID = "6527094393";
-// const ANLE_CHAT_ID = "5933330412";
+// const LESOR_CHAT_ID = "6527094393";
+const ANLE_CHAT_ID = "5933330412";
 
 // const messages = ["Hehe"];
 
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     case "water-drink-reminder":
       await axios.post("https://api.telegram.org/bot7085375476:AAEIzgkjJ7fMcuwmNWjrxprUptQSfT5AIxg/sendMessage", null, {
         params: {
-          chat_id: LESOR_CHAT_ID,
+          chat_id: ANLE_CHAT_ID,
           text: sample(WATER_DRINK_REMINDER_MESSAGES),
         },
       });
