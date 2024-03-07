@@ -11,7 +11,10 @@ dayjs.extend(timezone);
 // const messages = ["Hehe"];
 
 export function POST() {
-  return new Response(`cron-job anle ${dayjs().tz("Asia/Ho_Chi_Minh").toISOString()}`, {
+  const now = dayjs().tz("Asia/Ho_Chi_Minh");
+  const hour = now.hour();
+
+  return new Response(`cron-job anle local ${hour}`, {
     status: 200,
   });
 }
