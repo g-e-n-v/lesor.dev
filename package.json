@@ -12,6 +12,7 @@
   "dependencies": {
     "@9gustin/react-notion-render": "^3.11.2",
     "@notionhq/client": "^2.2.13",
+    "axios": "^1.6.7",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "framer-motion": "^10.16.5",
