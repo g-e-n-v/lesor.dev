@@ -6,9 +6,9 @@ import dayjs from "dayjs";
 // const messages = ["Hehe"];
 
 export function POST() {
-  console.log(dayjs().format("DD/MM/YYYY HH:mm:ss"));
+  console.log(dayjs().toISOString());
 
-  return new Response("Hello, Next.js! anle", {
+  return new Response(`cron-job anle ${dayjs().toISOString()}`, {
     status: 200,
   });
 }
