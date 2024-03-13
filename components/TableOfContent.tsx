@@ -10,7 +10,7 @@ export const TableOfContent = ({ toc, className }: TableOfContentProps) => {
   return (
     <div
       className={cn(
-        "flex w-80 translate-y-2 flex-col font-mono opacity-40 transition-all duration-500 hover:translate-y-0 hover:opacity-100",
+        "flex w-80 translate-y-1 flex-col font-mono opacity-40 transition-all duration-500 hover:translate-y-0 hover:opacity-100",
         className
       )}
     >
