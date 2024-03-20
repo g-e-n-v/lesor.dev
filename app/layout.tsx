@@ -8,22 +8,23 @@ const fontSans = Encode_Sans_Expanded({
   subsets: ["latin-ext", "vietnamese"],
   preload: true,
   variable: "--font-sans",
-  display: "fallback",
+  display: "swap",
   weight: ["400", "600", "700", "900"],
 });
 
 const fontSerif = Lora({
-  subsets: ["vietnamese", "latin-ext"],
+  subsets: ["latin-ext", "vietnamese"],
   preload: true,
   variable: "--font-serif",
-  display: "fallback",
+  display: "swap",
 });
 
 const fontMono = Sono({
   weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
+  subsets: ["latin-ext", "vietnamese"],
   variable: "--font-mono",
-  display: "fallback",
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {
