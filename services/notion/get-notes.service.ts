@@ -63,8 +63,6 @@ const isCompleteBlockObjectResponse = (
   block: PartialBlockObjectResponse | BlockObjectResponse
 ): block is BlockObjectResponse => "type" in block;
 
-export const isBlockHasChildren = (block: BlockObjectResponse) => block.has_children;
-
 const getBlocks = async (blockId: string) => {
   const blocks: Array<BlockObjectResponse> = [];
   let cursor: Maybe<string> = undefined;
