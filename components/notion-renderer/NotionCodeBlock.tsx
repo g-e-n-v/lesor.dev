@@ -1,11 +1,10 @@
 "use client";
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-// @ts-expect-error: react types don’t type these.
 import { jsx, jsxs } from "react/jsx-runtime";
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
 import { Fragment, useRef } from "react";
 import { refractor } from "refractor";
-import type { Nodes } from "hast-util-to-jsx-runtime/lib";
+import type { Nodes, Options } from "hast-util-to-jsx-runtime/lib";
 import { OutlineClipboardTextIcon } from "@/assets/icons/OutlineClipboardTextIcon";
 import { cn } from "@/utils/cn.util";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
@@ -13,7 +12,7 @@ import { CODE_LANGUAGE_ICON } from "@/constants/mapping-language-icon.constant";
 import { useClipboard } from "@/hooks/useClipboard";
 import { OutlineClipboardTickIcon } from "@/assets/icons/OutlineClipboardTickIcon";
 
-export type NotionCodeBlockProps = Pick<CodeBlockObjectResponse, "code">;
+type NotionCodeBlockProps = Pick<CodeBlockObjectResponse, "code">;
 
 export const NotionCodeBlock = ({ code }: NotionCodeBlockProps) => {
   const codeRef = useRef<HTMLElement>(null);
@@ -23,8 +22,13 @@ export const NotionCodeBlock = ({ code }: NotionCodeBlockProps) => {
   const codePlainText = rich_text.map((text) => text.plain_text).join("");
 
   const tree = refractor.highlight(codePlainText, language);
-  /*  eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */
-  const content = toJsxRuntime(tree as Nodes, { Fragment, jsx, jsxs });
+
+  const content = toJsxRuntime(tree as Nodes, {
+    Fragment,
+    jsx: jsx as Options["jsx"],
+    jsxs: jsxs as Options["jsxs"],
+    development: false,
+  });
 
   const title = getPlainText(caption) || language;
   const Icon = CODE_LANGUAGE_ICON[language];
