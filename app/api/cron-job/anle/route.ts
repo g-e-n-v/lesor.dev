@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       break;
   }
 
-  return new Response(`OK`, {
+  return new Response("OK", {
     status: 200,
   });
 }
