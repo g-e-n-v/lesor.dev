@@ -31,7 +31,7 @@ export const NotionRichText = ({ content }: NotionParagraphProps) => {
         className: cn(
           {
             underline: annotations.underline,
-            "font-bold": annotations.bold,
+            "font-semibold": annotations.bold,
             italic: annotations.italic,
             "line-through": annotations.strikethrough,
             "bg-neutral-200/50 rounded-md py-0.5 px-1 text-sm font-medium text-blue-500": annotations.code,

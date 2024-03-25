@@ -1,7 +1,7 @@
 import "@/styles/global.css";
 
 import { cn } from "@/utils/cn.util";
-import { Encode_Sans_Expanded, Lora, Sono } from "next/font/google";
+import { Encode_Sans_Expanded, Lora, Space_Mono } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
 const fontSans = Encode_Sans_Expanded({
@@ -19,9 +19,9 @@ const fontSerif = Lora({
   display: "swap",
 });
 
-const fontMono = Sono({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin-ext", "vietnamese"],
+const fontMono = Space_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin-ext"],
   variable: "--font-mono",
   display: "swap",
   adjustFontFallback: false,

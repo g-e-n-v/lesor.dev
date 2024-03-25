@@ -46,7 +46,7 @@ const BlockRenderer = ({ block }: BlockRendererProps) => {
     case "heading_2":
       return (
         <h2
-          className="-mt-16 pb-4 pt-24 font-mono text-2xl font-bold before:text-slate-400"
+          className="-mt-16 pb-4 pt-24 font-mono text-2xl before:text-slate-400"
           id={getHeadingId(block.heading_2.rich_text)}
         >
           <NotionRichText content={block.heading_2.rich_text} />
