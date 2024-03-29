@@ -1,13 +1,9 @@
 import { TableOfContent } from "@/components/TableOfContent";
 import { Tag } from "@/components/Tag";
 import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
-import {
-  getPublishedWritingBySlug,
-  getPublishedWritingContentBySlug,
-  getPublishedWritings,
-} from "@/services/notion/get-notes.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
 import { getTableOfContent } from "@/services/notion/get-table-of-content.service";
+import { getNoteDetail, getNotes } from "@/services/notion/notes.service";
 import { cn } from "@/utils/cn.util";
 import { formatShortDate } from "@/utils/dayjs.util";
 import type { Metadata } from "next";
@@ -18,7 +14,7 @@ type WritingPageProps = {
 };
 
 export default async function WritingPage({ params }: WritingPageProps) {
-  const { content, summary } = await getPublishedWritingContentBySlug(params.slug);
+  const { content, summary } = await getNoteDetail(params.slug);
 
   if (!content) {
     notFound();
@@ -63,7 +59,7 @@ export default async function WritingPage({ params }: WritingPageProps) {
 }
 
 export const generateMetadata = async ({ params }: WritingPageProps): Promise<Metadata> => {
-  const writing = await getPublishedWritingBySlug(params.slug);
+  const [writing] = await getNotes({ slug: params.slug, type: "writing", status: "Published" });
 
   if (!writing) {
     return {};
@@ -78,7 +74,7 @@ export const generateMetadata = async ({ params }: WritingPageProps): Promise<Me
 };
 
 export const generateStaticParams = async () => {
-  const writings = await getPublishedWritings();
+  const writings = await getNotes({ status: "Published", type: "writing" });
 
   return writings.map((writing) => ({
     slug: writing.slug,

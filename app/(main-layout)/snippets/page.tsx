@@ -1,12 +1,12 @@
 import { Tag } from "@/components/Tag";
-import { getPublishedSnippets } from "@/services/notion/get-notes.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { getNotes } from "@/services/notion/notes.service";
 import { cn } from "@/utils/cn.util";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export default async function SnippetsPage() {
-  const snippets = await getPublishedSnippets();
+  const snippets = await getNotes({ status: "Published", type: "snippet" });
 
   return (
     <>

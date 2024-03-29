@@ -1,11 +1,7 @@
 import { Tag } from "@/components/Tag";
 import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
-import {
-  getPublishedSnippetBySlug,
-  getPublishedSnippetContentBySlug,
-  getPublishedSnippets,
-} from "@/services/notion/get-notes.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { getNoteDetail, getNotes } from "@/services/notion/notes.service";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -14,9 +10,9 @@ type SnippetPageProps = {
 };
 
 export default async function SnippetPage({ params }: SnippetPageProps) {
-  const { content, summary } = (await getPublishedSnippetContentBySlug(params.slug)) ?? {};
+  const { content, summary } = await getNoteDetail(params.slug);
 
-  if (!content || !summary) {
+  if (!content) {
     notFound();
   }
 
@@ -44,7 +40,7 @@ export default async function SnippetPage({ params }: SnippetPageProps) {
 }
 
 export const generateMetadata = async ({ params }: SnippetPageProps): Promise<Metadata> => {
-  const snippet = await getPublishedSnippetBySlug(params.slug);
+  const [snippet] = await getNotes({ slug: params.slug, status: "Published", type: "snippet" });
 
   if (!snippet) {
     return {};
@@ -59,7 +55,7 @@ export const generateMetadata = async ({ params }: SnippetPageProps): Promise<Me
 };
 
 export const generateStaticParams = async () => {
-  const snippets = await getPublishedSnippets();
+  const snippets = await getNotes({ status: "Published", type: "snippet" });
 
   return snippets.map((snippet) => ({
     slug: snippet.slug,

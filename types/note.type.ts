@@ -17,3 +17,9 @@ export type Note = {
   tags: Array<NoteTag>;
   slug: string;
 };
+
+export type NoteFilter = Partial<{
+  status: "Published" | "Draft" | "Not Started";
+  type: "writing" | "snippet";
+  slug: string;
+}>;
