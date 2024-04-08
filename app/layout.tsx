@@ -1,8 +1,9 @@
 import "@/styles/global.css";
 
-import { cn } from "@/utils/cn.util";
 import { Encode_Sans_Expanded, Lora, Space_Mono } from "next/font/google";
 import type { PropsWithChildren } from "react";
+
+import { cn } from "@/utils/cn.util";
 
 const fontSans = Encode_Sans_Expanded({
   subsets: ["latin-ext", "vietnamese"],

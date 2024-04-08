@@ -1,5 +1,5 @@
-import type { RichText } from "@/types/app.type";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
+import type { RichText } from "@/types/app.type";
 import { removeAccent } from "@/utils/string.util";
 
 export const getHeadingId = (richText: RichText) => {

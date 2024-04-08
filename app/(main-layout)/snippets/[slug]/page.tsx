@@ -1,9 +1,10 @@
-import { Tag } from "@/components/Tag";
-import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
-import { getPlainText } from "@/services/notion/get-plain-text.service";
-import { getNoteDetail, getNotes } from "@/services/notion/notes.service";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
+import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
+import { Tag } from "@/components/Tag";
+import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { getNoteDetail, getNotes } from "@/services/notion/notes.service";
 
 type SnippetPageProps = {
   params: { slug: string };

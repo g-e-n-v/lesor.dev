@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
+
 import { WritingCard } from "@/components/WritingCard";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
 import { getNotes } from "@/services/notion/notes.service";
-import type { Metadata } from "next";
 
 export default async function WritingsPage() {
   const writings = await getNotes({ status: "Published", type: "writing" });

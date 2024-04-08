@@ -1,5 +1,6 @@
-import { Footer } from "@/components/Footer";
 import type { PropsWithChildren } from "react";
+
+import { Footer } from "@/components/Footer";
 
 export default function SingleSnippetLayout({ children }: PropsWithChildren) {
   return (

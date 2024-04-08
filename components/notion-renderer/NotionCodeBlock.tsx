@@ -1,16 +1,17 @@
 "use client";
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { jsx, jsxs } from "react/jsx-runtime";
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
-import { Fragment, useRef } from "react";
-import { refractor } from "refractor";
 import type { Nodes, Options } from "hast-util-to-jsx-runtime/lib";
+import { Fragment, useRef } from "react";
+import { jsx, jsxs } from "react/jsx-runtime";
+import { refractor } from "refractor";
+
 import { OutlineClipboardTextIcon } from "@/assets/icons/OutlineClipboardTextIcon";
-import { cn } from "@/utils/cn.util";
-import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { OutlineClipboardTickIcon } from "@/assets/icons/OutlineClipboardTickIcon";
 import { CODE_LANGUAGE_ICON } from "@/constants/mapping-language-icon.constant";
 import { useClipboard } from "@/hooks/useClipboard";
-import { OutlineClipboardTickIcon } from "@/assets/icons/OutlineClipboardTickIcon";
+import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { cn } from "@/utils/cn.util";
 
 type NotionCodeBlockProps = Pick<CodeBlockObjectResponse, "code">;
 

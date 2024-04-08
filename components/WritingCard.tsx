@@ -1,9 +1,10 @@
+import Link from "next/link";
+
+import { Tag } from "@/components/Tag";
 import type { StrictDayJsConfigType } from "@/types/app.type";
 import type { NoteTag } from "@/types/note.type";
-import { formatShortDate } from "@/utils/dayjs.util";
-import { Tag } from "@/components/Tag";
-import Link from "next/link";
 import { cn } from "@/utils/cn.util";
+import { formatShortDate } from "@/utils/dayjs.util";
 
 type WritingCardProps = {
   title: string;

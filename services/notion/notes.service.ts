@@ -1,10 +1,11 @@
-import type { Note, NoteFilter } from "@/types/note.type";
-import { notion } from "@/services/notion/client";
-import type { NotionQueryFilter } from "@/types/notion.type";
-import type { NotionNote } from "@/types/app.type";
-import dayjs from "dayjs";
-import { getPlainText } from "@/services/notion/get-plain-text.service";
 import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import dayjs from "dayjs";
+
+import { notion } from "@/services/notion/client";
+import { getPlainText } from "@/services/notion/get-plain-text.service";
+import type { NotionNote } from "@/types/app.type";
+import type { Note, NoteFilter } from "@/types/note.type";
+import type { NotionQueryFilter } from "@/types/notion.type";
 
 const isBlockObjectResponse = (block: Record<string, unknown>): block is BlockObjectResponse => "type" in block;
 

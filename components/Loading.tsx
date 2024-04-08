@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn.util";
 import React from "react";
+
+import { cn } from "@/utils/cn.util";
 
 type LoadingProps = {
   className?: string;

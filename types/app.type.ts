@@ -1,5 +1,6 @@
 import type { PageObjectResponse, RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ConfigType } from "dayjs";
+
 import type {
   NotionMultipleSelectProperty,
   NotionRichTextProperty,

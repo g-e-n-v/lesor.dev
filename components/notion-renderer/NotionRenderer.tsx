@@ -1,11 +1,12 @@
+import "@/styles/code-highlight.css";
+
 import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { NotionRichText } from "@/components/notion-renderer/NotionRichText";
-import { NotionCodeBlock } from "@/components/notion-renderer/NotionCodeBlock";
-import { NotionImage } from "@/components/notion-renderer/NotionImage";
 import type { ReactHTML } from "react";
 import { createElement, type JSX } from "react";
 
-import "@/styles/code-highlight.css";
+import { NotionCodeBlock } from "@/components/notion-renderer/NotionCodeBlock";
+import { NotionImage } from "@/components/notion-renderer/NotionImage";
+import { NotionRichText } from "@/components/notion-renderer/NotionRichText";
 import { getHeadingId } from "@/services/id.service";
 
 const WRAPPER_TAG: Partial<Record<string, keyof ReactHTML>> = {

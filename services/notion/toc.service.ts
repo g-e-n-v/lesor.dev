@@ -1,7 +1,8 @@
-import type { TOCSection } from "@/types/writing.type";
 import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+
 import { getHeadingId } from "@/services/id.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
+import type { TOCSection } from "@/types/writing.type";
 
 type NotionHeading = Extract<BlockObjectResponse, { type: `heading_${number}` }>;
 

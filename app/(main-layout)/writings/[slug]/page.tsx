@@ -1,13 +1,14 @@
-import { TableOfContent } from "@/components/TableOfContent";
-import { Tag } from "@/components/Tag";
-import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
-import { getPlainText } from "@/services/notion/get-plain-text.service";
-import { getTableOfContent } from "@/services/notion/get-table-of-content.service";
-import { getNoteDetail, getNotes } from "@/services/notion/notes.service";
-import { cn } from "@/utils/cn.util";
-import { formatShortDate } from "@/utils/dayjs.util";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
+import { NotionRenderer } from "@/components/notion-renderer/NotionRenderer";
+import { TableOfContent } from "@/components/TableOfContent";
+import { Tag } from "@/components/Tag";
+import { getPlainText } from "@/services/notion/get-plain-text.service";
+import { getNoteDetail, getNotes } from "@/services/notion/notes.service";
+import { getTableOfContent } from "@/services/notion/toc.service";
+import { cn } from "@/utils/cn.util";
+import { formatShortDate } from "@/utils/dayjs.util";
 
 type WritingPageProps = {
   params: { slug: string };

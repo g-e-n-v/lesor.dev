@@ -1,11 +1,12 @@
 "use client";
-import { cn } from "@/utils/cn.util";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { BoldHomeIcon } from "@/assets/icons/BoldHomeIcon";
 import AVATAR_IMAGE from "@/assets/images/trungluc.jpg";
-import Image from "next/image";
+import { cn } from "@/utils/cn.util";
 
 const NAV_ITEMS = [
   {

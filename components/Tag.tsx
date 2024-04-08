@@ -1,5 +1,6 @@
-import { cn } from "@/utils/cn.util";
 import type { PropsWithChildren } from "react";
+
+import { cn } from "@/utils/cn.util";
 
 type TagProps = PropsWithChildren<{ color: string }>;
 

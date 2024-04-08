@@ -1,7 +1,8 @@
 "use client";
-import { useDebounce } from "@/hooks/useDebounce";
 import type { ChangeEvent } from "react";
 import { useState } from "react";
+
+import { useDebounce } from "@/hooks/useDebounce";
 
 const items = [
   "Go to school",
