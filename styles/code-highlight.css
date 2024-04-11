@@ -283,7 +283,7 @@ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
 
 /* Default line numbers in Line Highlight plugin */
 .line-highlight.line-highlight::before,
-.line-highlight.line-highlight[data-end]:after {
+.line-highlight.line-highlight[data-end]::after {
   background: rgb(229, 229, 230);
   color: rgb(56, 58, 66);
   padding: 0.1em 0.6em;
@@ -392,7 +392,7 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 }
 
 /* Triangles pointing to the code */
-.prism-previewer.prism-previewer:after {
+.prism-previewer.prism-previewer::after {
   border-top-color: rgb(242, 242, 242);
 }
 
