@@ -242,10 +242,10 @@ pre[class*="language-"] {
 /* Selectors should have higher specificity than those in the plugins' default stylesheets */
 
 /* Show Invisibles plugin overrides */
-.token.token.tab:not(:empty):before,
-.token.token.cr:before,
-.token.token.lf:before,
-.token.token.space:before {
+.token.token.tab:not(:empty)::before,
+.token.token.cr::before,
+.token.token.lf::before,
+.token.token.space::before {
   color: rgba(56, 58, 66, 0.2);
 }
 
@@ -282,7 +282,7 @@ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
 }
 
 /* Default line numbers in Line Highlight plugin */
-.line-highlight.line-highlight:before,
+.line-highlight.line-highlight::before,
 .line-highlight.line-highlight[data-end]:after {
   background: rgb(229, 229, 230);
   color: rgb(56, 58, 66);
@@ -305,7 +305,7 @@ pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > spa
 }
 
 /* Stuff in the gutter */
-.line-numbers .line-numbers-rows > span:before,
+.line-numbers .line-numbers-rows > span::before,
 .command-line .command-line-prompt > span:before {
   color: rgb(157, 158, 159);
 }
@@ -379,13 +379,13 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 /* Previewers plugin overrides */
 /* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-light-ui */
 /* Border around popup */
-.prism-previewer.prism-previewer:before,
+.prism-previewer.prism-previewer::before,
 .prism-previewer-gradient.prism-previewer-gradient div {
   border-color: rgb(242, 242, 242);
 }
 
 /* Angle and time should remain as circles and are hence not included */
-.prism-previewer-color.prism-previewer-color:before,
+.prism-previewer-color.prism-previewer-color::before,
 .prism-previewer-gradient.prism-previewer-gradient div,
 .prism-previewer-easing.prism-previewer-easing:before {
   border-radius: 0.3em;
@@ -401,8 +401,8 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 }
 
 /* Background colour within the popup */
-.prism-previewer-angle.prism-previewer-angle:before,
-.prism-previewer-time.prism-previewer-time:before,
+.prism-previewer-angle.prism-previewer-angle::before,
+.prism-previewer-time.prism-previewer-time::before,
 .prism-previewer-easing.prism-previewer-easing {
   background: rgb(255, 255, 255);
 }
