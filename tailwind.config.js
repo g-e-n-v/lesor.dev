@@ -15,6 +15,7 @@ export default {
         sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
         mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
         serif: ["var(--font-serif)", ...defaultTheme.fontFamily.sans],
+        monaspace: ["var(--font-monaspace)", ...defaultTheme.fontFamily.mono],
       },
       colors: {
         brown: {
@@ -29,6 +30,28 @@ export default {
           800: "#4e342e",
           900: "#3e2723",
         },
+        primary: {
+          1: "#010C15",
+          2: "#011627",
+          3: "#011221",
+        },
+        secondary: {
+          1: "#607B96",
+          2: "#3C9D93",
+          3: "#4D5BCE",
+          4: "#FFFFFF",
+        },
+        accent: {
+          1: "#FEA55F",
+          2: "#43D9AD",
+          3: "#E99287",
+          4: "#C98BDF",
+        },
+        stroke: "#1E2D3D",
+        gradient: {
+          1: "#4D5BCE",
+          2: "#43D9AD",
+        },
       },
       aspectRatio: {
         A4: "21 / 29.7",
@@ -39,6 +62,7 @@ export default {
         base: "14px",
         lg: "16px",
         xl: "18px",
+        headline: "3.875rem",
       },
     },
   },

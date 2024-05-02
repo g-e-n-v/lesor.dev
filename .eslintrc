@@ -20,12 +20,24 @@
     "@typescript-eslint/array-type": ["error", { "default": "generic" }],
     "no-restricted-imports": [
       "error",
-      { "patterns": [{ "group": ["./*", "../*"], "message": "Please use absolute import instead relative import" }] }
+      {
+        "patterns": [
+          {
+            "group": ["./*", "../*"],
+            "message": "Please use absolute import instead relative import"
+          }
+        ]
+      }
     ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   },
-  "ignorePatterns": ["tailwind.config.js", "postcss.config.js", "next.config.mjs", "@types/**/*.d.ts"],
+  "ignorePatterns": [
+    "tailwind.config.js",
+    "postcss.config.js",
+    "next.config.mjs",
+    "@types/**/*.d.ts"
+  ],
   "settings": {
     "tailwindcss": {
       "callees": ["classnames", "clsx", "ctl", "cn"]

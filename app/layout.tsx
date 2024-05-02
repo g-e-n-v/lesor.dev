@@ -1,6 +1,7 @@
 import "@/styles/global.css";
 
 import { Encode_Sans_Expanded, Lora, Space_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import type { PropsWithChildren } from "react";
 
 import { cn } from "@/utils/cn.util";
@@ -24,13 +25,24 @@ const fontMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin-ext"],
   variable: "--font-mono",
-  display: "swap",
-  adjustFontFallback: false,
+});
+
+const fontMonaspace = localFont({
+  src: "../assets/fonts/MonaspaceNeon-VF.ttf",
+  variable: "--font-monaspace",
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="vi" className={cn(fontSerif.variable, fontSans.variable, fontMono.variable)}>
+    <html
+      lang="vi"
+      className={cn(
+        fontSerif.variable,
+        fontSans.variable,
+        fontMono.variable,
+        fontMonaspace.variable
+      )}
+    >
       <body className="bg-gray-50/50 text-base text-gray-950">{children}</body>
     </html>
   );
