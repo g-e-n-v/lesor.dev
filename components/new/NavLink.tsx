@@ -13,11 +13,10 @@ type NavLinkProps = PropsWithChildren<
 >;
 
 export function NavLink({ className, children, isActive, ...rest }: NavLinkProps) {
-  console.log(rest.href, isActive);
   return (
     <Link
       className={cn(
-        "relative inline-flex h-full items-center border-r border-stroke px-5",
+        "relative inline-flex h-full cursor-pointer items-center border-r border-stroke px-5",
         "hover:bg-stroke/35 hover:text-secondary-4",
         className
       )}
