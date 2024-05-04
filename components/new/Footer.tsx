@@ -9,14 +9,14 @@ const SOCIAL_LINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="flex h-12 border-t border-stroke">
+    <footer className="flex h-8 border-t border-stroke">
       <div className="flex h-full items-center border-r border-stroke px-5">find me in:</div>
       {SOCIAL_LINKS.map(({ href, icon }) => (
         <Link
           key={href}
           href={href}
           className={cn(
-            "flex aspect-square h-full items-center justify-center border-r border-stroke text-2xl",
+            "flex aspect-square h-full items-center justify-center border-r border-stroke text-lg",
             "hover:bg-stroke/35 hover:text-secondary-4"
           )}
           target="_blank"

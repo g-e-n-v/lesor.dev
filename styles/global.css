@@ -4,7 +4,7 @@
 
 @layer utilities {
   .ligatures-none {
-    font-variant-ligatures: none;
+    font-variant-ligatures: no-common-ligatures;
   }
 
   .toc-index {
