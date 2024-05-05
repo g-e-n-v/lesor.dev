@@ -28,29 +28,35 @@ export function Header() {
   return (
     <header className="h-12 shrink-0 border-b border-stroke">
       <nav className="flex h-full">
-        <NavLink href={"/new/hello"} className="min-w-80">
+        <NavLink href={"/new/hello"} className="w-80 shrink-0">
           lesor.dev
         </NavLink>
 
-        {NAV_ITEMS.map(({ label, href }) => {
-          const isActive = pathname.includes(href);
+        <ul className="flex w-full">
+          {NAV_ITEMS.map(({ label, href }) => {
+            const isActive = pathname.includes(href);
 
-          return (
-            <NavLink key={href} href={href} isActive={isActive}>
-              {label}
+            return (
+              <li key={href}>
+                <NavLink href={href} isActive={isActive}>
+                  {label}
+                </NavLink>
+              </li>
+            );
+          })}
+
+          <div className="grow" />
+
+          <li>
+            <NavLink
+              href="/new/contact"
+              isActive={pathname.includes("/contact")}
+              className="border-l border-r-0"
+            >
+              _contact-me
             </NavLink>
-          );
-        })}
-
-        <div className="grow" />
-
-        <NavLink
-          href="/new/contact"
-          isActive={pathname.includes("/contact")}
-          className="border-l border-r-0"
-        >
-          _contact-me
-        </NavLink>
+          </li>
+        </ul>
       </nav>
     </header>
   );

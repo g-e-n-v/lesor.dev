@@ -30,7 +30,13 @@
       }
     ],
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
   },
   "ignorePatterns": [
     "tailwind.config.js",

@@ -14,7 +14,7 @@ type WritingCardProps = {
   slug: string;
 };
 
-export const WritingCard = ({ title, description, tags, publishDate, slug }: WritingCardProps) => {
+export function WritingCard({ title, description, tags, publishDate, slug }: WritingCardProps) {
   return (
     <Link href={`/writings/${slug}`} className="flex">
       <div className={cn("hidden w-28 shrink-0 py-4 text-right text-sm font-semibold text-gray-500", "md:block")}>
@@ -45,4 +45,4 @@ export const WritingCard = ({ title, description, tags, publishDate, slug }: Wri
       </div>
     </Link>
   );
-};
+}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 type NotionImageProps = Pick<ImageBlockObjectResponse, "image">;
 
-export const NotionImage = ({ image }: NotionImageProps) => {
+export function NotionImage({ image }: NotionImageProps) {
   const url = image.type === "external" ? image.external.url : image.file.url;
   const alt = image.caption.map((caption) => caption.plain_text).join(" ");
 
@@ -12,4 +12,4 @@ export const NotionImage = ({ image }: NotionImageProps) => {
       <Image src={url} alt={alt} sizes="100vw" fill className="object-contain" />
     </div>
   );
-};
+}

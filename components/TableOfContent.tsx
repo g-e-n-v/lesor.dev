@@ -6,7 +6,7 @@ type TableOfContentProps = {
   className?: string;
 };
 
-export const TableOfContent = ({ toc, className }: TableOfContentProps) => {
+export function TableOfContent({ toc, className }: TableOfContentProps) {
   return (
     <div
       className={cn(
@@ -37,4 +37,4 @@ export const TableOfContent = ({ toc, className }: TableOfContentProps) => {
       </a>
     </div>
   );
-};
+}

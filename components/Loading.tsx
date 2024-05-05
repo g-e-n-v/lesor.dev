@@ -6,7 +6,7 @@ type LoadingProps = {
   className?: string;
 };
 
-export const Loading = ({ className }: LoadingProps) => {
+export function Loading({ className }: LoadingProps) {
   return (
     <div className="flex w-full justify-center">
       <svg
@@ -19,4 +19,4 @@ export const Loading = ({ className }: LoadingProps) => {
       </svg>
     </div>
   );
-};
+}

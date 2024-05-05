@@ -1,7 +1,7 @@
 import type { SVGProps } from "react";
 
-export const BashIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="1em" height="1em" {...props}>
+export function BashIcon(props: SVGProps<SVGSVGElement>) {
+  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="1em" height="1em" {...props}>
     <path fill="none" d="M4.24 4.24h119.53v119.53H4.24z" />
     <path
       fill="#293138"
@@ -12,4 +12,4 @@ export const BashIcon = (props: SVGProps<SVGSVGElement>) => (
       d="m99.12 90.73-9.4 5.62c-.25.15-.43.31-.43.61v2.46c0 .3.2.43.45.28l9.54-5.8c.25-.15.29-.42.29-.72v-2.17c0-.3-.2-.42-.45-.28z"
     />
   </svg>
-);
+}

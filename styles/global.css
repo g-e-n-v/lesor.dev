@@ -29,12 +29,24 @@
   }
 }
 
+@layer base {
+  article h1 {
+    @apply text-2xl font-semibold text-accent-1 mb-3;
+    @apply before:content-['#_'] before:font-mono;
+  }
+
+  article section {
+    @apply mb-8;
+  }
+}
+
 html {
   scroll-behavior: smooth !important;
+  @apply bg-primary-1;
 }
 
 body {
-  overflow-x: hidden;
+  @apply overflow-x-hidden;
 }
 
 ::-webkit-scrollbar {
@@ -46,6 +58,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-200 rounded-full border-4 border-transparent border-solid bg-clip-content;
-  @apply hover:bg-slate-300;
+  @apply bg-stroke/80 rounded-full border-4 border-transparent border-solid bg-clip-content;
+  @apply hover:bg-secondary-1/50;
 }

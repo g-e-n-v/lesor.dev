@@ -27,7 +27,7 @@ type HeaderProps = {
   className?: string;
 };
 
-export const Header = ({ className }: HeaderProps) => {
+export function Header({ className }: HeaderProps) {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -82,4 +82,4 @@ export const Header = ({ className }: HeaderProps) => {
       </nav>
     </header>
   );
-};
+}

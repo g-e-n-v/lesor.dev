@@ -1,7 +1,7 @@
 import type { SVGProps } from "react";
 
-export const OutlineClipboardTextIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+export function OutlineClipboardTextIcon(props: SVGProps<SVGSVGElement>) {
+  return <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M15 12.9502H8C7.59 12.9502 7.25 12.6102 7.25 12.2002C7.25 11.7902 7.59 11.4502 8 11.4502H15C15.41 11.4502 15.75 11.7902 15.75 12.2002C15.75 12.6102 15.41 12.9502 15 12.9502Z"
       fill="currentColor"
@@ -19,4 +19,4 @@ export const OutlineClipboardTextIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+}

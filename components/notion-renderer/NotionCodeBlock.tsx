@@ -15,7 +15,7 @@ import { cn } from "@/utils/cn.util";
 
 type NotionCodeBlockProps = Pick<CodeBlockObjectResponse, "code">;
 
-export const NotionCodeBlock = ({ code }: NotionCodeBlockProps) => {
+export function NotionCodeBlock({ code }: NotionCodeBlockProps) {
   const codeRef = useRef<HTMLElement>(null);
   const clipboard = useClipboard({ timeout: 2000 });
 
@@ -63,4 +63,4 @@ export const NotionCodeBlock = ({ code }: NotionCodeBlockProps) => {
       </pre>
     </div>
   );
-};
+}

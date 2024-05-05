@@ -22,7 +22,7 @@ type BlockRendererProps = {
   block: BlockObjectResponse;
 };
 
-const BlockRenderer = ({ block }: BlockRendererProps) => {
+function BlockRenderer({ block }: BlockRendererProps) {
   switch (block.type) {
     case "paragraph":
       return (
@@ -87,10 +87,11 @@ const BlockRenderer = ({ block }: BlockRendererProps) => {
       );
 
     default:
+      console.log(JSON.stringify(block));
       console.error(`${block.type} not supported`);
       return null;
   }
-};
+}
 
 export const NotionRenderer = ({ blocks }: NotionRendererProps) => {
   const jsxBlocks: Array<JSX.Element> = [];
@@ -113,7 +114,9 @@ export const NotionRenderer = ({ blocks }: NotionRendererProps) => {
     }
 
     if (group && group.type !== block.type) {
-      jsxBlocks.push(createElement(WRAPPER_TAG[group.type] ?? "div", { className: "pl-6 mb-2" }, group.children));
+      jsxBlocks.push(
+        createElement(WRAPPER_TAG[group.type] ?? "div", { className: "pl-6 mb-2" }, group.children)
+      );
       group = null;
     }
 

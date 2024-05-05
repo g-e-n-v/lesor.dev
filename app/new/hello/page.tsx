@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import BgBlurs from "@/assets/svgs/bg-blurs.svg";
 import { TextTyping } from "@/components/TextTyping";
 
-export default function HomePage() {
+export default function HelloPage() {
   return (
     <div className="h-full overflow-hidden px-4">
       <div className="mx-auto grid h-full max-w-5xl grid-cols-2 gap-4">

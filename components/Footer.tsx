@@ -4,7 +4,7 @@ type FooterProps = {
   className?: string;
 };
 
-export const Footer = ({ className }: FooterProps) => {
+export function Footer({ className }: FooterProps) {
   return (
     <footer className={cn("text-center text-sm text-slate-500", className)}>
       <hr />
@@ -13,4 +13,4 @@ export const Footer = ({ className }: FooterProps) => {
       </div>
     </footer>
   );
-};
+}

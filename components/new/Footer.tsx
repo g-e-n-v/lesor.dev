@@ -7,9 +7,9 @@ const SOCIAL_LINKS = [
   { label: "Facebook", href: "https://www.facebook.com/lesor.dev", icon: <IconFacebook /> },
 ];
 
-export const Footer = () => {
+export function Footer() {
   return (
-    <footer className="flex h-8 border-t border-stroke">
+    <footer className="flex h-8 shrink-0 border-t border-stroke">
       <div className="flex h-full items-center border-r border-stroke px-5">find me in:</div>
       {SOCIAL_LINKS.map(({ href, icon }) => (
         <Link
@@ -26,4 +26,4 @@ export const Footer = () => {
       ))}
     </footer>
   );
-};
+}
