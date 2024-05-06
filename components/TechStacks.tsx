@@ -56,7 +56,6 @@ export function TechStacks() {
           <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
             <TechTag icon={IconNextJs} name="nextjs" />
             <TechTag icon={IconReact} name="react" />
-            <TechTag icon={IconGraphQL} name="graphql" />
             <TechTag icon={IconApollo} name="apollo-client" />
             <TechTag icon={IconRedux} name="redux" />
             <TechTag icon={IconVite} name="vite" />
@@ -99,6 +98,7 @@ export function TechStacks() {
           <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Others</td>
           <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
             <TechTag icon={IconGit} name="git" />
+            <TechTag icon={IconGraphQL} name="graphql" />
             <TechTag icon={IconNx} name="nx" />
             <TechTag icon={IconSonarQube} name="sonarqube" />
             <TechTag icon={IconCircleCI} name="circleci" />
