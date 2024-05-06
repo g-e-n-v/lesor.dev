@@ -15,7 +15,7 @@ type WorkCardProps = {
 
 export function WorkCard({ company, description, from, logo, position, to }: WorkCardProps) {
   return (
-    <div className="mb-4 flex flex-col gap-2">
+    <div className="flex flex-col gap-2">
       <div className="flex gap-2">
         {logo ? (
           <Image className="size-12 rounded-lg bg-white p-1" src={logo} alt={company} />

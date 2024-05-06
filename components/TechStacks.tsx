@@ -36,79 +36,71 @@ import IconVite from "@/assets/svgs/vite.svg";
 import IconVitest from "@/assets/svgs/vitest.svg";
 import IconVSCode from "@/assets/svgs/vscode.svg";
 import { TechTag } from "@/components/TechTag";
+import { cn } from "@/utils/cn.util";
 
 export function TechStacks() {
   return (
-    <table>
-      <tbody>
-        <tr>
-          <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Programming Languages</td>
-          <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
-            <TechTag icon={IconJavascript} name="javascript" />
-            <TechTag icon={IconTypescript} name="typescript" />
-            <TechTag icon={IconJava} name="java" />
-            <TechTag icon={IconDart} name="dart" />
-            <TechTag icon={IconPython} name="python" />
-          </td>
-        </tr>
-        <tr>
-          <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Front-end</td>
-          <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
-            <TechTag icon={IconNextJs} name="nextjs" />
-            <TechTag icon={IconReact} name="react" />
-            <TechTag icon={IconApollo} name="apollo-client" />
-            <TechTag icon={IconRedux} name="redux" />
-            <TechTag icon={IconVite} name="vite" />
-            <TechTag icon={IconTailwindCSS} name="tailwindcss" />
-            <TechTag icon={IconPostCSS} name="postcss" />
-            <TechTag icon={IconFramerMotion} name="framer-motion" />
-            <TechTag icon={IconStorybook} name="storybook" />
-            <TechTag icon={IconThreeJs} name="three.js" />
-            <TechTag icon={IconReactQuery} name="react-query" />
-            <TechTag icon={IconAntD} name="ant-design" />
-            <TechTag icon={IconMaterialUI} name="material-ui" />
-          </td>
-        </tr>
-        <tr>
-          <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Back-end</td>
-          <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
-            <TechTag icon={IconNestJs} name="nestjs" />
-            <TechTag icon={IconExpress} name="express" />
-            <TechTag icon={IconSpring} name="spring" />
-            <TechTag icon={IconDocker} name="docker" />
-          </td>
-        </tr>
-        <tr>
-          <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Database</td>
-          <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
-            <TechTag icon={IconPostgreSQL} name="postgresql" />
-            <TechTag icon={IconMongoDB} name="mongodb" />
-          </td>
-        </tr>
-        <tr>
-          <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Testing</td>
-          <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
-            <TechTag icon={IconVitest} name="vitest" />
-            <TechTag icon={IconJest} name="jest" />
-            <TechTag icon={IconPlaywright} name="playwright" />
-            <TechTag icon={IconSelenium} name="selenium" />
-          </td>
-        </tr>
-        <tr>
-          <td className="whitespace-nowrap py-4 pr-6 align-top leading-6">Others</td>
-          <td className="flex flex-wrap gap-x-2 gap-y-3 py-4">
-            <TechTag icon={IconGit} name="git" />
-            <TechTag icon={IconGraphQL} name="graphql" />
-            <TechTag icon={IconNx} name="nx" />
-            <TechTag icon={IconSonarQube} name="sonarqube" />
-            <TechTag icon={IconCircleCI} name="circleci" />
-            <TechTag icon={IconSentry} name="sentry" />
-            <TechTag icon={IconFigma} name="figma" />
-            <TechTag icon={IconVSCode} name="vscode" />
-            <TechTag icon={IconPostman} name="postman" />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className={cn("grid grid-cols-1 gap-4", "lg:grid-cols-[max-content_1fr] lg:gap-y-8")}>
+      <div className="whitespace-nowrap align-top leading-6">Programming Languages</div>
+      <div className="flex flex-wrap gap-x-2 gap-y-3">
+        <TechTag icon={IconJavascript} name="javascript" />
+        <TechTag icon={IconTypescript} name="typescript" />
+        <TechTag icon={IconJava} name="java" />
+        <TechTag icon={IconDart} name="dart" />
+        <TechTag icon={IconPython} name="python" />
+      </div>
+
+      <div className="whitespace-nowrap align-top leading-6">Front-end</div>
+      <div className="flex flex-wrap gap-x-2 gap-y-3">
+        <TechTag icon={IconNextJs} name="nextjs" />
+        <TechTag icon={IconReact} name="react" />
+        <TechTag icon={IconApollo} name="apollo-client" />
+        <TechTag icon={IconRedux} name="redux" />
+        <TechTag icon={IconVite} name="vite" />
+        <TechTag icon={IconTailwindCSS} name="tailwindcss" />
+        <TechTag icon={IconPostCSS} name="postcss" />
+        <TechTag icon={IconFramerMotion} name="framer-motion" />
+        <TechTag icon={IconStorybook} name="storybook" />
+        <TechTag icon={IconThreeJs} name="three.js" />
+        <TechTag icon={IconReactQuery} name="react-query" />
+        <TechTag icon={IconAntD} name="ant-design" />
+        <TechTag icon={IconMaterialUI} name="material-ui" />
+      </div>
+
+      <div className="whitespace-nowrap align-top leading-6">Back-end</div>
+      <div className="flex flex-wrap gap-x-2 gap-y-3">
+        <TechTag icon={IconNestJs} name="nestjs" />
+        <TechTag icon={IconExpress} name="express" />
+        <TechTag icon={IconSpring} name="spring" />
+        <TechTag icon={IconDocker} name="docker" />
+      </div>
+
+      <div className="whitespace-nowrap align-top leading-6">Database</div>
+      <div className="flex flex-wrap gap-x-2 gap-y-3">
+        <TechTag icon={IconPostgreSQL} name="postgresql" />
+        <TechTag icon={IconMongoDB} name="mongodb" />
+      </div>
+
+      <div className="whitespace-nowrap align-top leading-6">Testing</div>
+      <div className="flex flex-wrap gap-x-2 gap-y-3">
+        <TechTag icon={IconVitest} name="vitest" />
+        <TechTag icon={IconJest} name="jest" />
+        <TechTag icon={IconPlaywright} name="playwright" />
+        <TechTag icon={IconSelenium} name="selenium" />
+      </div>
+
+      <div className="whitespace-nowrap align-top leading-6">Others</div>
+      <div className="flex flex-wrap gap-x-2 gap-y-3">
+        <TechTag icon={IconGit} name="git" />
+        <TechTag icon={IconGraphQL} name="graphql" />
+        <TechTag icon={IconNx} name="nx" />
+        <TechTag icon={IconSonarQube} name="sonarqube" />
+        <TechTag icon={IconCircleCI} name="circleci" />
+        <TechTag icon={IconSentry} name="sentry" />
+        <TechTag icon={IconFigma} name="figma" />
+        <TechTag icon={IconVSCode} name="vscode" />
+        <TechTag icon={IconPostman} name="postman" />
+      </div>
+    </div>
   );
 }

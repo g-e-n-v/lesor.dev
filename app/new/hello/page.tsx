@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 
 import BgBlurs from "@/assets/svgs/bg-blurs.svg";
 import { TextTyping } from "@/components/TextTyping";
+import { cn } from "@/utils/cn.util";
 
 export default function HelloPage() {
   return (
     <div className="h-full overflow-hidden px-4">
-      <div className="mx-auto grid h-full max-w-5xl grid-cols-2 gap-4">
+      <div className={cn("relative mx-auto grid h-full max-w-5xl gap-4", "lg:grid-cols-2")}>
         <div className="flex flex-col justify-center gap-20 pb-28">
           <div>
             <div className="text-xl text-secondary-5">Hi all, I am</div>
@@ -23,9 +24,9 @@ export default function HelloPage() {
           </div>
         </div>
 
-        <div className="relative">
-          <BgBlurs className="absolute -left-60 top-0 h-full" />
-        </div>
+        <div className={cn("hidden", "lg:block")}></div>
+
+        <BgBlurs className="absolute right-0 top-0 aspect-square h-full" />
       </div>
     </div>
   );

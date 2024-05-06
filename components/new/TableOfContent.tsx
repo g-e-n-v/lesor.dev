@@ -1,5 +1,5 @@
 "use client";
-import { uniq } from "lodash-es";
+import { range, uniq } from "lodash-es";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -19,30 +19,33 @@ export function TableOfContent() {
   const [activeIds, setActiveIds] = useState<Array<string>>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute("id") ?? "";
+    const config = {
+      root: document.getElementById("article") ?? document.body,
+      threshold: range(0, 0.1, 0.01),
+    };
 
-        if (entry.intersectionRatio > 0) {
-          setActiveIds((ids) => uniq([...ids, id]));
-        } else {
-          setActiveIds((ids) => ids.filter((i) => i !== id));
-        }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ intersectionRatio, target }) => {
+        const id = target.getAttribute("id") ?? "";
+        console.log("[observe]", id, intersectionRatio);
+
+        setActiveIds((ids) =>
+          intersectionRatio ? uniq([...ids, id]) : ids.filter((v) => v !== id)
+        );
       });
-    });
+    }, config);
 
     const sectionElements = Array.from(document.querySelectorAll("section[id]"));
-    setSections(
-      sectionElements.map((el) => {
-        const id = el.getAttribute("id") ?? "";
-        const heading = el.querySelector("h2, h3, h4");
-        const title = heading?.textContent?.toLowerCase().replaceAll(" ", "-") ?? "";
-        const level = Number(heading?.nodeName[1]);
+    const sections = sectionElements.map((el) => {
+      const id = el.getAttribute("id") ?? "";
+      const heading = el.querySelector("h2, h3, h4");
+      const title = heading?.textContent?.toLowerCase().replaceAll(" ", "-") ?? "";
+      const level = Number(heading?.nodeName[1]);
 
-        return { id, title, level };
-      })
-    );
+      return { id, title, level };
+    });
 
+    setSections(sections);
     sectionElements.forEach((section) => {
       observer.observe(section);
     });

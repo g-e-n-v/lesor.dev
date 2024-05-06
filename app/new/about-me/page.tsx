@@ -4,15 +4,16 @@ import EIS_LOGO from "@/assets/images/eis.png";
 import { TableOfContent } from "@/components/new/TableOfContent";
 import { TechStacks } from "@/components/TechStacks";
 import { WorkCard } from "@/components/WorkCard";
+import { cn } from "@/utils/cn.util";
 
 export default function AboutMePage() {
   return (
     <div className="flex h-full">
-      <div className="w-80 shrink-0 border-r border-stroke">
+      <div className={cn("hidden w-80 shrink-0 border-r border-stroke", "lg:block")}>
         <TableOfContent />
       </div>
 
-      <div className="grow overflow-y-auto">
+      <div className="grow overflow-y-auto" id="article">
         <article className="mx-auto max-w-4xl scroll-smooth p-4 leading-6">
           <section id="summary">
             <h2>Summary</h2>
@@ -64,6 +65,23 @@ export default function AboutMePage() {
                 />
               </section>
             </div>
+          </section>
+
+          <section id="education">
+            <h2>Education</h2>
+            <section id="education__fpt">
+              <WorkCard
+                company="FPT University"
+                position="Software Engineering"
+                description={[
+                  "Classification: Good",
+                  "Coursework: Data Structure & Algorithm, Operating Systems, Networking, Computer Architecture, Software Development Process,...",
+                  "Leader of FU-Dever Club - software development club at FPT University, Da Nang Campus.",
+                ]}
+                from={"2019-08-01"}
+                to={"2023-08-01"}
+              />
+            </section>
           </section>
         </article>
       </div>
