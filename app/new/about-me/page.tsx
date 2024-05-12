@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import EIS_LOGO from "@/assets/images/eis.png";
+import FU_LOGO from "@/assets/images/fu-logo.jpg";
 import { TableOfContent } from "@/components/new/TableOfContent";
 import { TechStacks } from "@/components/TechStacks";
 import { WorkCard } from "@/components/WorkCard";
@@ -14,7 +15,7 @@ export default function AboutMePage() {
       </div>
 
       <div className="grow overflow-y-auto" id="article">
-        <article className="mx-auto max-w-4xl scroll-smooth p-4 leading-6">
+        <article className="mx-auto flex max-w-4xl flex-col gap-12 scroll-smooth p-4 leading-6">
           <section id="summary">
             <h2>Summary</h2>
             <p className="text-justify">
@@ -42,13 +43,15 @@ export default function AboutMePage() {
                   company="Enouvo IT Solution"
                   position="Software Engineer"
                   from="2022-03-01"
-                  description={[
-                    "Optimize website performance, and improve UI/UX.",
-                    "Reduce the number of issued tickets by using Typescript and applying unit tests.",
-                    "Write a coding guideline and review checklists, applicable to the whole team.",
-                    "Share knowledge about software development with the team weekly.",
-                    "Follow up on the feature's release plan.",
-                  ]}
+                  description={
+                    [
+                      // "Optimize website performance, and improve UI/UX.",
+                      // "Reduce the number of issued tickets by using Typescript and applying unit tests.",
+                      // "Write a coding guideline and review checklists, applicable to the whole team.",
+                      // "Share knowledge about software development with the team weekly.",
+                      // "Follow up on the feature's release plan.",
+                    ]
+                  }
                 />
               </section>
 
@@ -58,10 +61,12 @@ export default function AboutMePage() {
                   position="Frontend Developer"
                   from="2021-04-01"
                   to="2022-03-01"
-                  description={[
-                    "Engage in the creation of a digital currency exchange and Non-Fungible Token (NFT) offerings.",
-                    "Build a cross-platform mobile app",
-                  ]}
+                  description={
+                    [
+                      // "Engage in the creation of a digital currency exchange and Non-Fungible Token (NFT) offerings.",
+                      // "Build a cross-platform mobile app",
+                    ]
+                  }
                 />
               </section>
             </div>
@@ -80,6 +85,7 @@ export default function AboutMePage() {
                 ]}
                 from={"2019-08-01"}
                 to={"2023-08-01"}
+                logo={FU_LOGO}
               />
             </section>
           </section>

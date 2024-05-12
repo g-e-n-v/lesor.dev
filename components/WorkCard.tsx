@@ -16,7 +16,7 @@ type WorkCardProps = {
 export function WorkCard({ company, description, from, logo, position, to }: WorkCardProps) {
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         {logo ? (
           <Image className="size-12 rounded-lg bg-white p-1" src={logo} alt={company} />
         ) : (
@@ -32,7 +32,7 @@ export function WorkCard({ company, description, from, logo, position, to }: Wor
         </div>
       </div>
 
-      <ul className="list-inside list-disc pl-4">
+      <ul className="list-outside list-disc pl-8 pt-2">
         {description.map((item, index) => (
           <li key={index}>{item}</li>
         ))}

@@ -34,10 +34,6 @@
     @apply text-2xl font-semibold text-accent-1 mb-3;
     @apply before:content-['#_'] before:font-mono;
   }
-
-  article section {
-    @apply mb-8;
-  }
 }
 
 * {

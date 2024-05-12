@@ -1,10 +1,10 @@
 "use client";
-import { range, uniq } from "lodash-es";
+import { filter, range, uniq } from "lodash-es";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import IconFile from "@/assets/svgs/file.svg";
 import IconFolderOpen from "@/assets/svgs/folder-open.svg";
+import IconMarkdown from "@/assets/svgs/markdown.svg";
 import IconTOC from "@/assets/svgs/toc.svg";
 import { cn } from "@/utils/cn.util";
 
@@ -14,27 +14,16 @@ type TOCItem = {
   level: number;
 };
 
-export function TableOfContent() {
+type TableOfContentProps = {
+  autoHighlight?: boolean;
+};
+
+export function TableOfContent({ autoHighlight = true }: TableOfContentProps) {
   const [sections, setSections] = useState<Array<TOCItem>>();
   const [activeIds, setActiveIds] = useState<Array<string>>([]);
 
   useEffect(() => {
-    const config = {
-      root: document.getElementById("article") ?? document.body,
-      threshold: range(0, 0.1, 0.01),
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(({ intersectionRatio, target }) => {
-        const id = target.getAttribute("id") ?? "";
-        console.log("[observe]", id, intersectionRatio);
-
-        setActiveIds((ids) =>
-          intersectionRatio ? uniq([...ids, id]) : ids.filter((v) => v !== id)
-        );
-      });
-    }, config);
-
+    // INFO:  get all sections
     const sectionElements = Array.from(document.querySelectorAll("section[id]"));
     const sections = sectionElements.map((el) => {
       const id = el.getAttribute("id") ?? "";
@@ -44,12 +33,30 @@ export function TableOfContent() {
 
       return { id, title, level };
     });
-
     setSections(sections);
-    sectionElements.forEach((section) => {
-      observer.observe(section);
-    });
-  }, []);
+
+    // INFO: observer for auto highlight
+    const config = {
+      root: document.getElementById("article") ?? document.body,
+      threshold: range(0, 0.1, 0.05),
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ intersectionRatio, target }) => {
+        const id = target.getAttribute("id") ?? "";
+
+        setActiveIds((ids) =>
+          intersectionRatio ? uniq([...ids, id]) : filter(ids, (v) => v !== id)
+        );
+      });
+    }, config);
+
+    if (autoHighlight) {
+      sectionElements.forEach((section) => {
+        observer.observe(section);
+      });
+    }
+  }, [autoHighlight]);
 
   return (
     <nav>
@@ -67,8 +74,9 @@ export function TableOfContent() {
               href={`#${section.id}`}
             >
               {section.level === 2 && <IconFolderOpen className="text-lg" />}
-              {section.level === 3 && <IconFile className="text-lg" />}
+              {section.level === 3 && <IconMarkdown className="text-lg" />}
               {section.title}
+              {section.level === 3 && ".md"}
             </Link>
           </li>
         ))}
