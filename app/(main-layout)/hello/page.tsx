@@ -6,6 +6,7 @@ import IconArrowRight from "@/assets/svgs/arrow-right.svg";
 import IconLocation from "@/assets/svgs/location.svg";
 import VietnamFlag from "@/assets/svgs/vietnam-flag.svg";
 import { Divider } from "@/components/Divider";
+import { TechStacks } from "@/components/TechStacks";
 import { WritingCard } from "@/components/WritingCard";
 import { getCoverUrl } from "@/services/notion/get-cover-url.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
@@ -17,15 +18,19 @@ export default async function HelloPage() {
 
   return (
     <div className="py-10">
-      <h1 className="mb-2 flex items-start gap-2 text-3xl font-medium">
+      <h1 className="mb-2 flex items-start gap-2 text-3xl font-semibold">
         Hi, I&apos;m Luc <Image src={WAVING_HAND_PNG} alt="waving hand" className="size-7" />
       </h1>
 
-      <div className="mb-6 flex items-center gap-2 text-neutral-500">
+      <Link
+        href="https://maps.app.goo.gl/9uJqLtQ9qJZYhRTf6"
+        target="_blank"
+        className={cn("mb-6 flex items-center gap-2 text-neutral-500", "hover:underline")}
+      >
         <IconLocation />
         <span>Da Nang, Viet Nam</span>
         <VietnamFlag className="text-xl" />
-      </div>
+      </Link>
 
       <p>
         I&apos;m a full-stack software engineer with a primary focus on front-end development. I
@@ -38,7 +43,7 @@ export default async function HelloPage() {
 
       <section>
         <h2 className="mb-4 flex justify-between text-xl font-medium">
-          Latest Writings{" "}
+          Latest Writings
           <Link
             href="/writings"
             className={cn(
@@ -66,6 +71,24 @@ export default async function HelloPage() {
       </section>
 
       <Divider />
+
+      <section>
+        <h2 className="mb-4 flex justify-between text-xl font-medium">Tools That I Have Used</h2>
+        <TechStacks />
+      </section>
+
+      <Divider />
+
+      <section>
+        <h2 className="mb-4 flex justify-between text-xl font-medium">
+          What I&apos;ve Been Working On
+        </h2>
+        <p>
+          I assist brands, companies, institutions, and startups in creating exceptional digital
+          experiences for their businesses through strategic development services.
+        </p>
+        {/* <TechStacks /> */}
+      </section>
     </div>
   );
 }

@@ -67,6 +67,15 @@ export default {
         headline: "3.875rem",
         subheadline: "2rem",
       },
+      keyframes: {
+        loop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "looping-tag": "loop 50s linear infinite",
+      },
     },
   },
   plugins: [],

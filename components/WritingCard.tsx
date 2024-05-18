@@ -46,7 +46,7 @@ export function WritingCard({ title, thumbnail, slug, tags, description }: Writi
           "group-hover:h-4/5"
         )}
       >
-        <h2 className="line-clamp-2 shrink-0">{title}</h2>
+        <h2 className={cn("line-clamp-2 shrink-0", "group-hover:text-white")}>{title}</h2>
         <desc
           className={cn(
             "line-clamp-3 h-0 overflow-hidden italic text-neutral-500",
