@@ -5,8 +5,8 @@ import WAVING_HAND_PNG from "@/assets/images/waving-hand.png";
 import IconArrowRight from "@/assets/svgs/arrow-right.svg";
 import IconLocation from "@/assets/svgs/location.svg";
 import VietnamFlag from "@/assets/svgs/vietnam-flag.svg";
-import { Divider } from "@/components/v3/Divider";
-import { WritingCard } from "@/components/v3/WritingCard";
+import { Divider } from "@/components/Divider";
+import { WritingCard } from "@/components/WritingCard";
 import { getCoverUrl } from "@/services/notion/get-cover-url.service";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
 import { getNotes } from "@/services/notion/notes.service";
@@ -50,7 +50,7 @@ export default async function HelloPage() {
             <IconArrowRight />
           </Link>
         </h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className={cn("grid grid-cols-1 gap-4", "md:grid-cols-2", "lg:grid-cols-3")}>
           {writings.slice(0, 3).map((writing) => (
             <WritingCard
               thumbnail={getCoverUrl(writing.cover)}

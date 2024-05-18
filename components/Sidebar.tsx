@@ -12,7 +12,7 @@ import IconHeartbeat from "@/assets/svgs/heartbeat.svg";
 import IconHome from "@/assets/svgs/home.svg";
 import IconSearch from "@/assets/svgs/search.svg";
 import IconSend from "@/assets/svgs/send.svg";
-import { KeyboardKey } from "@/components/v3/KeyboardKey";
+import { KeyboardKey } from "@/components/KeyboardKey";
 // import { ThemeSwitcher } from "@/components/v3/ThemeSwitcher";
 import { cn } from "@/utils/cn.util";
 
