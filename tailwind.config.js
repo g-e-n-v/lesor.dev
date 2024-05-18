@@ -74,7 +74,7 @@ export default {
         },
       },
       animation: {
-        "looping-tag": "loop 50s linear infinite",
+        "looping-tag": "loop 100s linear infinite",
       },
     },
   },

@@ -34,7 +34,7 @@ export function WritingCard({ title, thumbnail, slug, tags, description }: Writi
             src={thumbnail}
             alt={title}
             className="absolute size-full object-cover object-bottom"
-            layout="fill"
+            fill
           />
         )}
       </div>
