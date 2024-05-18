@@ -56,9 +56,10 @@ export default async function HelloPage() {
             <IconArrowRight />
           </Link>
         </h2>
-        <div className={cn("grid grid-cols-1 gap-4", "md:grid-cols-2", "lg:grid-cols-3")}>
-          {writings.slice(0, 3).map((writing) => (
+        <div className="flex gap-4 overflow-x-auto">
+          {writings.slice(0, 4).map((writing) => (
             <WritingCard
+              className="w-72 shrink-0"
               thumbnail={getCoverUrl(writing.cover)}
               key={writing.id}
               title={getPlainText(writing.title)}
@@ -100,7 +101,13 @@ export default async function HelloPage() {
             collaborate.
           </p>
 
-          <Link href="/contact" className="rounded-lg bg-neutral-600 px-3 py-2">
+          <Link
+            href="/contact"
+            className={cn(
+              "rounded-lg bg-neutral-600 px-3 py-2 transition-all",
+              "hover:bg-neutral-700"
+            )}
+          >
             Contact me
           </Link>
         </div>

@@ -14,13 +14,24 @@ type WritingCardProps = {
   publishDate: StrictDayJsConfigType;
   slug: string;
   thumbnail: Maybe<string>;
+  className?: string;
 };
 
-export function WritingCard({ title, thumbnail, slug, tags, description }: WritingCardProps) {
+export function WritingCard({
+  title,
+  thumbnail,
+  slug,
+  tags,
+  description,
+  className,
+}: WritingCardProps) {
   return (
     <Link
       href={`/writings/${slug}`}
-      className="group relative aspect-square overflow-hidden rounded-lg border border-neutral-700 bg-blue-100"
+      className={cn(
+        "group relative inline-block aspect-square overflow-hidden rounded-lg border border-neutral-700",
+        className
+      )}
     >
       <div
         className={cn(
@@ -47,7 +58,7 @@ export function WritingCard({ title, thumbnail, slug, tags, description }: Writi
         )}
       >
         <h2 className={cn("line-clamp-2 shrink-0", "group-hover:text-white")}>{title}</h2>
-        <desc
+        <p
           className={cn(
             "line-clamp-3 h-0 overflow-hidden italic text-neutral-500",
             "transition-all duration-500",
@@ -55,7 +66,7 @@ export function WritingCard({ title, thumbnail, slug, tags, description }: Writi
           )}
         >
           {description}
-        </desc>
+        </p>
 
         <div className="flex grow items-end gap-1">
           {tags.map(({ name, color }) => (
