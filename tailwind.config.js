@@ -60,9 +60,10 @@ export default {
       fontSize: {
         xs: "0.625rem",
         sm: "0.75rem",
-        base: "0.875rem",
+        base: "15px",
         lg: "1rem",
         xl: "1.125rem",
+        "2xl": "1.25rem",
         headline: "3.875rem",
         subheadline: "2rem",
       },

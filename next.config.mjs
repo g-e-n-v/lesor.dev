@@ -6,7 +6,11 @@ const nextConfig = {
     dirs: ["app", "services", "types"],
   },
   images: {
-    remotePatterns: [{ hostname: "images.unsplash.com" }, { hostname: "*.amazonaws.com" }],
+    remotePatterns: [
+      { hostname: "images.unsplash.com" },
+      { hostname: "*.amazonaws.com" },
+      { hostname: "www.notion.so" },
+    ],
   },
   webpack: (config) => {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));

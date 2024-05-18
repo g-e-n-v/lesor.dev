@@ -1,17 +1,18 @@
 import "@/styles/global.css";
 
-import { Encode_Sans_Expanded, Lora, Space_Mono } from "next/font/google";
+import { Lora, Onest } from "next/font/google";
 import localFont from "next/font/local";
+import { ThemeProvider } from "next-themes";
 import type { PropsWithChildren } from "react";
 
 import { cn } from "@/utils/cn.util";
 
-const fontSans = Encode_Sans_Expanded({
-  subsets: ["latin-ext", "vietnamese"],
+const fontSans = Onest({
+  subsets: ["latin-ext"],
   preload: true,
   variable: "--font-sans",
   display: "swap",
-  weight: ["400", "600", "700", "900"],
+  weight: ["400", "500", "600", "700", "900"],
 });
 
 const fontSerif = Lora({
@@ -21,29 +22,24 @@ const fontSerif = Lora({
   display: "swap",
 });
 
-const fontMono = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin-ext"],
-  variable: "--font-mono",
-});
-
-const fontMonaspace = localFont({
+const fontMono = localFont({
   src: "../assets/fonts/MonaspaceNeon-VF.ttf",
-  variable: "--font-monaspace",
+  variable: "--font-mono",
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang="vi"
-      className={cn(
-        fontSerif.variable,
-        fontSans.variable,
-        fontMono.variable,
-        fontMonaspace.variable
-      )}
+      className={cn(fontSerif.variable, fontSans.variable, fontMono.variable)}
+      suppressHydrationWarning
     >
-      <body className="bg-gray-50/50 text-base text-gray-950">{children}</body>
+      <head />
+      <body className="text-base leading-7 tracking-wide">
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
