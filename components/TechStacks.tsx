@@ -1,4 +1,4 @@
-import { chunk, shuffle } from "lodash-es";
+import { ceil, chunk, shuffle } from "lodash-es";
 
 import IconAntD from "@/assets/svgs/antd.svg";
 import IconApollo from "@/assets/svgs/apollo.svg";
@@ -81,14 +81,14 @@ const TECK_STACKS = [
 ];
 
 export function TechStacks() {
-  const tagGroups = chunk(shuffle(TECK_STACKS), Math.ceil(TECK_STACKS.length / 3));
+  const tagGroups = chunk(shuffle(TECK_STACKS), ceil(TECK_STACKS.length / 3));
 
   return (
     <div className={cn("flex flex-col gap-2")}>
       {tagGroups.map((tags, idx) => (
         <div key={idx} className="overflow-x-hidden">
           <div
-            className="w-fit whitespace-nowrap motion-safe:animate-looping-tag"
+            className="w-fit animate-looping-tag whitespace-nowrap"
             style={{ animationDirection: idx % 2 ? "reverse !important" : "normal" }}
           >
             {[...tags, ...tags].map((tag, idx) => (
