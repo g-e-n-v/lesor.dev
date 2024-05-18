@@ -88,8 +88,9 @@ export function TechStacks() {
       {tagGroups.map((tags, idx) => (
         <div key={idx} className="overflow-x-hidden">
           <div
-            className="w-fit animate-looping-tag whitespace-nowrap"
-            style={{ animationDirection: idx % 2 ? "reverse !important" : "normal" }}
+            className={cn("w-fit animate-looping-tag whitespace-nowrap", {
+              "[animation-direction:reverse]": idx % 2,
+            })}
           >
             {[...tags, ...tags].map((tag, idx) => (
               <TechTag key={idx} className="mr-2" {...tag} />

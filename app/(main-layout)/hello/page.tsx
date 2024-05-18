@@ -4,6 +4,7 @@ import Link from "next/link";
 import WAVING_HAND_PNG from "@/assets/images/waving-hand.png";
 import IconArrowRight from "@/assets/svgs/arrow-right.svg";
 import IconLocation from "@/assets/svgs/location.svg";
+import IconRocket from "@/assets/svgs/rocket.svg";
 import VietnamFlag from "@/assets/svgs/vietnam-flag.svg";
 import { Divider } from "@/components/Divider";
 import { TechStacks } from "@/components/TechStacks";
@@ -83,11 +84,26 @@ export default async function HelloPage() {
         <h2 className="mb-4 flex justify-between text-xl font-medium">
           What I&apos;ve Been Working On
         </h2>
-        <p>
+        <p className="mb-4">
           I assist brands, companies, institutions, and startups in creating exceptional digital
           experiences for their businesses through strategic development services.
         </p>
-        {/* <TechStacks /> */}
+
+        <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-4">
+          <h2 className="mb-2 flex items-center gap-2 text-xl font-medium">
+            <IconRocket />
+            Lets work together!
+          </h2>
+
+          <p className="mb-4">
+            I&apos;m open for freelance projects, feel free to email me to see how can we
+            collaborate.
+          </p>
+
+          <Link href="/contact" className="rounded-lg bg-neutral-600 px-3 py-2">
+            Contact me
+          </Link>
+        </div>
       </section>
     </div>
   );
