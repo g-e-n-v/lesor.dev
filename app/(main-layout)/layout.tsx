@@ -12,7 +12,7 @@ export default function Layout({ children }: PropsWithChildren) {
           "md:static md:h-full md:w-60"
         )}
       />
-      <main className="h-full grow overflow-y-auto">{children}</main>
+      <main className="h-full grow overflow-y-auto scrollbar-none">{children}</main>
     </div>
   );
 }
