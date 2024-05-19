@@ -78,7 +78,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
   safelist: ["blue", "orange", "gray", "brown", "yellow", "purple", "green", "red", "pink"].reduce(
     (classNames, color) => [
       ...classNames,

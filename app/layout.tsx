@@ -1,5 +1,6 @@
 import "@/styles/global.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Lora, Onest } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
@@ -31,7 +32,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang="vi"
-      className={cn(fontSerif.variable, fontSans.variable, fontMono.variable)}
+      className={cn(fontSerif.variable, fontSans.variable, fontMono.variable, "dark")}
       suppressHydrationWarning
     >
       <head />
@@ -39,6 +40,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
+
+        <SpeedInsights />
       </body>
     </html>
   );

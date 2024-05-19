@@ -56,7 +56,7 @@ export default async function HelloPage() {
             <IconArrowRight />
           </Link>
         </h2>
-        <div className="flex gap-4 overflow-x-auto">
+        <div className="flex gap-4 overflow-x-auto scrollbar-none">
           {writings.slice(0, 4).map((writing) => (
             <WritingCard
               className="w-72 shrink-0"
