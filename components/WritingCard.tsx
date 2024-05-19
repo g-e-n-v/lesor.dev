@@ -32,7 +32,8 @@ export function WritingCard({
     <Link
       href={`/writings/${slug}`}
       className={cn(
-        "group relative inline-block aspect-[3/4] overflow-hidden rounded-lg border border-neutral-700",
+        "group relative inline-block aspect-square overflow-hidden rounded-lg border border-neutral-700",
+        "sm:aspect-[3/4]",
         className
       )}
     >

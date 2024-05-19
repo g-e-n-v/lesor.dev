@@ -14,7 +14,7 @@ export default async function WritingsPage() {
       <p className="text-neutral-500">Web development thoughts and stories</p>
       <DashDivider />
 
-      <div className={cn("grid grid-cols-2 gap-4", "lg:grid-cols-3")}>
+      <div className={cn("grid grid-cols-1 gap-4", "sm:grid-cols-2", "lg:grid-cols-3")}>
         {writings.map((writing) => (
           <WritingCard
             thumbnail={getCoverUrl(writing.cover)}
