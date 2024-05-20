@@ -17,6 +17,7 @@ export default async function WritingsPage() {
       <div className={cn("grid grid-cols-1 gap-4", "sm:grid-cols-2", "lg:grid-cols-3")}>
         {writings.map((writing) => (
           <WritingCard
+            className={cn("aspect-square", "sm:aspect-[3/4]")}
             thumbnail={getCoverUrl(writing.cover)}
             key={writing.id}
             title={getPlainText(writing.title)}
