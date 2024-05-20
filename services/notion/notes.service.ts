@@ -7,7 +7,8 @@ import type { NotionNote } from "@/types/app.type";
 import type { Note, NoteFilter } from "@/types/note.type";
 import type { NotionQueryFilter } from "@/types/notion.type";
 
-const isBlockObjectResponse = (block: Record<string, unknown>): block is BlockObjectResponse => "type" in block;
+const isBlockObjectResponse = (block: Record<string, unknown>): block is BlockObjectResponse =>
+  "type" in block;
 
 export async function getNotes({ status, type, slug }: NoteFilter = {}) {
   const filter: NotionQueryFilter = {
@@ -32,7 +33,7 @@ export async function getNotes({ status, type, slug }: NoteFilter = {}) {
     description: result.properties.Description.rich_text,
     title: result.properties.Title.title,
     status: result.properties.Status.status,
-    publishDate: dayjs(result.last_edited_time),
+    publishDate: dayjs(result.created_time),
     tags: result.properties.Tag.multi_select,
     slug: getPlainText(result.properties.Slug.rich_text),
   }));

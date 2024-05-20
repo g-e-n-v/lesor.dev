@@ -36,7 +36,8 @@
       {
         "namedComponents": "function-declaration"
       }
-    ]
+    ],
+    "prefer-template": "error"
   },
   "ignorePatterns": [
     "tailwind.config.js",

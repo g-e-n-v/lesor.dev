@@ -6,27 +6,6 @@
   .ligatures-none {
     font-variant-ligatures: no-common-ligatures;
   }
-
-  .toc-index {
-    counter-reset: h2 h3;
-  }
-
-  .toc-index h2 {
-    counter-reset: h3;
-    counter-increment: h2;
-  }
-
-  .toc-index h2::before {
-    content: counter(h2) ". " !important;
-  }
-
-  .toc-index h3 {
-    counter-increment: h3;
-  }
-
-  .toc-index h3::before {
-    content: counter(h2) "." counter(h3) ". " !important;
-  }
 }
 
 @layer base {
@@ -34,18 +13,18 @@
     @apply text-2xl font-semibold text-accent-1 mb-3;
     @apply before:content-['#_'] before:font-mono;
   }
-}
 
-* {
-  @apply scroll-smooth;
-}
+  * {
+    @apply scroll-smooth;
+  }
 
-html {
-  @apply bg-neutral-50 text-neutral-950;
-}
+  html {
+    @apply bg-neutral-50 text-neutral-950;
+  }
 
-html.dark {
-  @apply bg-neutral-900 text-neutral-100;
+  html.dark {
+    @apply bg-neutral-900 text-neutral-100;
+  }
 }
 
 ::-webkit-scrollbar {

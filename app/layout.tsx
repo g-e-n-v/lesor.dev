@@ -3,6 +3,7 @@ import "@/styles/global.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Lora, Onest } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import type { PropsWithChildren } from "react";
 
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       suppressHydrationWarning
     >
       <head>
-        <script
+        <Script
           defer
           src="https://cloud.umami.is/script.js"
           data-website-id="8b8f0fe4-aa08-4629-bce5-d9831a63319f"
