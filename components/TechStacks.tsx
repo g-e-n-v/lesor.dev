@@ -84,7 +84,12 @@ export function TechStacks() {
   const tagGroups = chunk(shuffle(TECK_STACKS), ceil(TECK_STACKS.length / 3));
 
   return (
-    <div className={cn("flex flex-col gap-2")}>
+    <div
+      className={cn(
+        "relative flex flex-col gap-2",
+        "after:absolute after:size-full after:bg-gradient-to-r after:from-neutral-900 after:via-transparent after:to-neutral-900"
+      )}
+    >
       {tagGroups.map((tags, idx) => (
         <div key={idx} className="overflow-x-hidden">
           <div

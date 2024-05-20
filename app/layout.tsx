@@ -35,7 +35,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
       className={cn(fontSerif.variable, fontSans.variable, fontMono.variable, "dark")}
       suppressHydrationWarning
     >
-      <head />
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="8b8f0fe4-aa08-4629-bce5-d9831a63319f"
+        />
+      </head>
       <body className="text-base leading-7 tracking-wide">
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
