@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.2.15",
+    "@umami/api-client": "^0.67.0",
     "@vercel/speed-insights": "^1.0.10",
     "axios": "^1.6.8",
     "clsx": "^2.1.1",

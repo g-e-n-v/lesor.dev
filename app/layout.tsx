@@ -37,12 +37,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
       suppressHydrationWarning
     >
       <head>
-        {/* <Script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="8b8f0fe4-aa08-4629-bce5-d9831a63319f"
-        /> */}
-        <Script defer src="/api/in$ight" data-website-id="8b8f0fe4-aa08-4629-bce5-d9831a63319f" />
+        {process.env.NODE_ENV === "production" && (
+          <Script defer src="/api/in$ight" data-website-id="8b8f0fe4-aa08-4629-bce5-d9831a63319f" />
+        )}
       </head>
       <body className="text-base leading-7 tracking-wide">
         <ThemeProvider attribute="class" defaultTheme="dark">
