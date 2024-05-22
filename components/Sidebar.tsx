@@ -26,11 +26,6 @@ const NAV_ITEMS = [
     icon: <IconHome />,
   },
   {
-    label: "Monitor",
-    href: "/monitor",
-    icon: <IconHeartbeat />,
-  },
-  {
     label: "Writings",
     href: "/writings",
     icon: <IconBook />,
@@ -39,6 +34,11 @@ const NAV_ITEMS = [
     label: "Contact",
     href: "/contact",
     icon: <IconSend />,
+  },
+  {
+    label: "Monitor",
+    href: "/monitor",
+    icon: <IconHeartbeat />,
   },
 ];
 
