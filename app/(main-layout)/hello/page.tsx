@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -115,3 +116,7 @@ export default async function HelloPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Luc Le | lesor.dev",
+};

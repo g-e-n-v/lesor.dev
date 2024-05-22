@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
 import { Sidebar } from "@/components/Sidebar";
@@ -16,3 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Luc Le | lesor.dev",
+};
