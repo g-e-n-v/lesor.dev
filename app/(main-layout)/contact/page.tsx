@@ -27,7 +27,7 @@ const SOCIALS = [
   },
   {
     icon: IconFacebook,
-    url: "https://www.facebook.com/trungluc.dev/",
+    url: "https://www.facebook.com/lesor.dev/",
     name: "Facebook",
     color: "#0765FF",
   },
