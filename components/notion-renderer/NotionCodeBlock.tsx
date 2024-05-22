@@ -43,21 +43,21 @@ export function NotionCodeBlock({ code }: NotionCodeBlockProps) {
 
   return (
     <div>
-      <div className="flex items-center rounded-t-lg bg-gray-200 px-4 py-3">
+      <div className="flex items-center rounded-t-lg bg-neutral-700 px-4 py-3">
         <div className="flex grow items-center gap-2">
           {Icon && <Icon />}
-          <span className="font-mono text-xs text-gray-500">{title}</span>
+          <span className="font-mono text-xs">{title}</span>
         </div>
 
         <ClipboardIcon
-          className={cn("cursor-pointer text-gray-500 transition-all", {
+          className={cn("cursor-pointer transition-all", {
             "text-green-500": clipboard.copied,
           })}
           onClick={handleCopy}
         />
       </div>
-      <pre className="ligatures-none mb-8 overflow-x-auto rounded-b-lg bg-gray-200/50 p-4">
-        <code className="text-gray-700" ref={codeRef}>
+      <pre className="ligatures-none mb-8 overflow-x-auto rounded-b-lg bg-neutral-700/50 p-4">
+        <code className="text-neutral-100" ref={codeRef}>
           {content}
         </code>
       </pre>

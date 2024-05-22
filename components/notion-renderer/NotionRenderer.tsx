@@ -26,7 +26,7 @@ function BlockRenderer({ block }: BlockRendererProps) {
   switch (block.type) {
     case "paragraph":
       return (
-        <p className="pb-2 text-gray-950">
+        <p className="pb-2">
           <NotionRichText content={block.paragraph.rich_text} />
         </p>
       );
@@ -78,7 +78,7 @@ function BlockRenderer({ block }: BlockRendererProps) {
     case "quote":
       return (
         <blockquote className="relative my-4 border-s-4 ps-6">
-          <p className="py-2 text-gray-500">
+          <p className="py-2">
             <em>
               <NotionRichText content={block.quote.rich_text} />
             </em>

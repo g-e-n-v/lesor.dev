@@ -16,7 +16,7 @@ import { getNotes } from "@/services/notion/notes.service";
 import { cn } from "@/utils/cn.util";
 
 export default async function HelloPage() {
-  const writings = await getNotes({ type: "writing" });
+  const writings = await getNotes({ type: "writing", status: "Published" });
 
   return (
     <div className="py-10">
@@ -37,8 +37,7 @@ export default async function HelloPage() {
       <p>
         I&apos;m a full-stack software engineer with a primary focus on front-end development. I
         work with JavaScript and specialize in all-things web. I thrive on collaborating with teams
-        to deliver efficient, scalable, and visually appealing web applications. If you need
-        something done tomorrow, hit me up today.
+        to deliver efficient, scalable, and visually appealing web applications.
       </p>
 
       <Divider />
@@ -98,8 +97,8 @@ export default async function HelloPage() {
           </h2>
 
           <p className="mb-4">
-            I&apos;m open for freelance projects, feel free to email me to see how can we
-            collaborate.
+            I&apos;m looking forward to connecting with you. Don&apos;t hesitate to reach out to me
+            for a meeting today.
           </p>
 
           <Link

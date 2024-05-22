@@ -6,7 +6,7 @@ import { getNotes } from "@/services/notion/notes.service";
 import { cn } from "@/utils/cn.util";
 
 export default async function WritingsPage() {
-  const writings = await getNotes({ type: "writing" });
+  const writings = await getNotes({ type: "writing", status: "Published" });
 
   return (
     <div className="py-10">
