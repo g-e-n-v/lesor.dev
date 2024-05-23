@@ -47,7 +47,7 @@ function BlockRenderer({ block }: BlockRendererProps) {
     case "heading_2":
       return (
         <h2
-          className="-mt-16 pb-4 pt-24 font-mono text-2xl before:text-slate-400"
+          className="-mt-16 pb-4 pt-24 font-mono text-2xl before:text-neutral-400"
           id={getHeadingId(block.heading_2.rich_text)}
         >
           <NotionRichText content={block.heading_2.rich_text} />
@@ -56,7 +56,7 @@ function BlockRenderer({ block }: BlockRendererProps) {
 
     case "heading_3":
       return (
-        <h3 className="mb-2 mt-4 font-mono text-xl font-medium before:text-slate-400">
+        <h3 className="mb-2 mt-4 font-mono text-xl font-medium before:text-neutral-400">
           <NotionRichText content={block.heading_3.rich_text} />
         </h3>
       );
@@ -77,7 +77,7 @@ function BlockRenderer({ block }: BlockRendererProps) {
 
     case "quote":
       return (
-        <blockquote className="relative my-4 border-s-4 ps-6">
+        <blockquote className="relative my-4 border-s-4 border-neutral-700 bg-neutral-700/30 ps-6">
           <p className="py-2">
             <em>
               <NotionRichText content={block.quote.rich_text} />

@@ -1,8 +1,7 @@
 import "@/styles/global.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Lora, Onest } from "next/font/google";
-import localFont from "next/font/local";
+import { Lora, Onest, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import type { PropsWithChildren } from "react";
@@ -24,9 +23,11 @@ const fontSerif = Lora({
   display: "swap",
 });
 
-const fontMono = localFont({
-  src: "../assets/fonts/MonaspaceNeon-VF.ttf",
+const fontMono = Space_Mono({
+  subsets: ["vietnamese", "latin-ext"],
+  preload: true,
   variable: "--font-mono",
+  weight: ["400", "700"],
 });
 
 export default function RootLayout({ children }: PropsWithChildren) {

@@ -57,7 +57,7 @@ export function NotionCodeBlock({ code }: NotionCodeBlockProps) {
         />
       </div>
       <pre className="ligatures-none mb-8 overflow-x-auto rounded-b-lg bg-neutral-700/50 p-4">
-        <code className="text-neutral-100" ref={codeRef}>
+        <code className="text-sm text-neutral-100" ref={codeRef}>
           {content}
         </code>
       </pre>

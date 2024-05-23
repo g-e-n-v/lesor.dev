@@ -33,17 +33,10 @@ export default async function WritingPage({ params }: WritingPageProps) {
           ))}
         </div>
       </div>
-      <h1
-        className={cn(
-          "mb-8 mt-2 font-mono text-3xl font-bold",
-          "before:text-slate-300 before:content-['#.']"
-        )}
-      >
-        {getPlainText(title)}
-      </h1>
-      <p className="mb-6 italic">{getPlainText(description)}</p>
+      <h1 className={cn("mb-8 mt-2 font-mono text-3xl font-bold")}>{getPlainText(title)}</h1>
+      <p className="mb-6 italic text-neutral-500">{getPlainText(description)}</p>
 
-      <hr className="mb-8 w-1/4" />
+      <hr className="mb-8 w-1/4 border-neutral-700" />
 
       <article className="prose-neutral leading-loose tracking-wide dark:prose-invert">
         <NotionRenderer blocks={content} />
