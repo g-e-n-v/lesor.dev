@@ -10,7 +10,7 @@
 
 @layer base {
   article h2 {
-    @apply text-2xl font-semibold text-accent-1 mb-3;
+    @apply text-2xl font-semibold mb-3;
     @apply before:content-['#_'] before:font-mono;
   }
 
@@ -37,6 +37,5 @@
 
 ::-webkit-scrollbar-thumb {
   @apply rounded-full border-4 border-transparent border-solid bg-clip-content;
-  @apply hover:bg-secondary-1/50;
   @apply bg-transparent;
 }

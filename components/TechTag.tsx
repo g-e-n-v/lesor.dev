@@ -13,12 +13,12 @@ export function TechTag({ icon: Icon, name, className }: TechTagProps) {
     <div
       className={cn(
         "group",
-        "inline-flex cursor-pointer items-center gap-2 rounded-full bg-stroke/35 px-3 py-1",
+        "inline-flex cursor-pointer items-center gap-2 rounded-full bg-slate-800/40 px-3 py-1",
         className
       )}
     >
       <Icon className={cn("rounded text-xl transition-all")} />
-      <span className={cn("text-sm transition-all", "group-hover:text-secondary-4")}>{name}</span>
+      <span className={cn("text-sm transition-all")}>{name}</span>
     </div>
   );
 }
