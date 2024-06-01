@@ -1,12 +1,12 @@
 import type { FunctionComponent } from "react";
 
-import { BashIcon } from "@/assets/icons/BashIcon";
-import { JavaScriptIcon } from "@/assets/icons/JavaScriptIcon";
-import { TypescriptIcon } from "@/assets/icons/TypescriptIcon";
+import IconBash from "@/assets/svgs/bash.svg";
+import IconJavascript from "@/assets/svgs/javascript.svg";
+import IconTypescript from "@/assets/svgs/typescript.svg";
 import type { CodeLanguage } from "@/types/notion.type";
 
 export const CODE_LANGUAGE_ICON: Partial<Record<CodeLanguage, FunctionComponent>> = {
-  typescript: TypescriptIcon,
-  bash: BashIcon,
-  javascript: JavaScriptIcon,
+  bash: IconBash,
+  javascript: IconJavascript,
+  typescript: IconTypescript,
 };

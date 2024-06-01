@@ -3,9 +3,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 const ORIGINAL_SCRIPT_URL = "https://cloud.umami.is/script.js";
-// const ORIGINAL_API_ENDPOINT = "https://api-gateway.umami.dev";
 
-// const OBFUSCATED_API_ENDPOINT = "/";
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",

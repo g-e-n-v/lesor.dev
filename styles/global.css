@@ -36,7 +36,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-stroke/80 rounded-full border-4 border-transparent border-solid bg-clip-content;
+  @apply rounded-full border-4 border-transparent border-solid bg-clip-content;
   @apply hover:bg-secondary-1/50;
   @apply bg-transparent;
 }

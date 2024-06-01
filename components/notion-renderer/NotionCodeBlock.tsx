@@ -6,8 +6,8 @@ import { Fragment, useRef } from "react";
 import { jsx, jsxs } from "react/jsx-runtime";
 import { refractor } from "refractor";
 
-import { OutlineClipboardTextIcon } from "@/assets/icons/OutlineClipboardTextIcon";
-import { OutlineClipboardTickIcon } from "@/assets/icons/OutlineClipboardTickIcon";
+import ClipboardTextIcon from "@/assets/svgs/clipboard-text.svg";
+import ClipboardTickIcon from "@/assets/svgs/clipboard-tick.svg";
 import { CODE_LANGUAGE_ICON } from "@/constants/mapping-language-icon.constant";
 import { useClipboard } from "@/hooks/useClipboard";
 import { getPlainText } from "@/services/notion/get-plain-text.service";
@@ -39,7 +39,7 @@ export function NotionCodeBlock({ code }: NotionCodeBlockProps) {
     clipboard.copy(content);
   };
 
-  const ClipboardIcon = clipboard.copied ? OutlineClipboardTickIcon : OutlineClipboardTextIcon;
+  const ClipboardIcon = clipboard.copied ? ClipboardTickIcon : ClipboardTextIcon;
 
   return (
     <div>
