@@ -21,7 +21,7 @@ export default async function HelloPage() {
   return (
     <div className="py-10">
       <h1 className="mb-2 flex items-start gap-2 text-3xl font-semibold">
-        Hi, I&apos;m Luc <Image src={WAVING_HAND_PNG} alt="waving hand" className="size-7" />
+        Hi, I&apos;m Luc <Image src={WAVING_HAND_PNG} alt="waving hand" height={28} width={28} />
       </h1>
 
       <Link

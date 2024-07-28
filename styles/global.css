@@ -6,6 +6,16 @@
   .ligatures-none {
     font-variant-ligatures: no-common-ligatures;
   }
+
+  .fade-x {
+    background-image: linear-gradient(
+      90deg,
+      #171717 0%,
+      #ffffff00 15%,
+      #ffffff00 85%,
+      #171717 100%
+    );
+  }
 }
 
 @layer base {
