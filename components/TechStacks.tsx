@@ -85,7 +85,7 @@ export function TechStacks() {
 
   return (
     <div
-      className={cn("relative flex flex-col gap-2", "after:absolute after:size-full after:fade-x")}
+      className={cn("relative flex flex-col gap-2", "after:fade-x after:absolute after:size-full")}
     >
       {tagGroups.map((tags, idx) => (
         <div key={idx} className="overflow-x-hidden">
