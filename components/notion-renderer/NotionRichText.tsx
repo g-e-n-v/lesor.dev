@@ -35,7 +35,7 @@ export const NotionRichText = ({ content }: NotionParagraphProps) => {
             "font-semibold": annotations.bold,
             italic: annotations.italic,
             "line-through": annotations.strikethrough,
-            "bg-neutral-200/50 rounded-md py-0.5 px-1 text-sm font-medium text-blue-500": annotations.code,
+            "bg-neutral-500 rounded-md py-0.5 px-1 text-sm font-medium text-blue-300": annotations.code,
             rounded: annotations.color.endsWith("_background"),
             "underline text-blue-400 font-medium cursor-pointer": href,
           },
