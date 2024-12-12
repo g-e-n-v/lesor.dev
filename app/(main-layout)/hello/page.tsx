@@ -35,9 +35,9 @@ export default async function HelloPage() {
       </Link>
 
       <p>
-        I&apos;m a full-stack software engineer with a primary focus on front-end development. I
-        work with JavaScript and specialize in all-things web. I thrive on collaborating with teams
-        to deliver efficient, scalable, and visually appealing web applications.
+        I&apos;m a full-stack software engineer with a primary focus on front-end development. I work with JavaScript
+        and specialize in all-things web. I thrive on collaborating with teams to deliver efficient, scalable, and
+        visually appealing web applications.
       </p>
 
       <Divider />
@@ -47,10 +47,7 @@ export default async function HelloPage() {
           Latest Writings
           <Link
             href="/writings"
-            className={cn(
-              "group flex items-center text-sm font-normal text-neutral-500",
-              "hover:text-neutral-100"
-            )}
+            className={cn("group flex items-center text-sm font-normal text-neutral-500", "hover:text-neutral-100")}
           >
             <span className={cn("mr-2 transition-all", "group-hover:mr-4")}>all writings</span>
             <IconArrowRight />
@@ -82,12 +79,10 @@ export default async function HelloPage() {
       <Divider />
 
       <section>
-        <h2 className="mb-4 flex justify-between text-xl font-medium">
-          What I&apos;ve Been Working On
-        </h2>
+        <h2 className="mb-4 flex justify-between text-xl font-medium">What I&apos;ve Been Working On</h2>
         <p className="mb-4">
-          I assist brands, companies, institutions, and startups in creating exceptional digital
-          experiences for their businesses through strategic development services.
+          I assist brands, companies, institutions, and startups in creating exceptional digital experiences for their
+          businesses through strategic development services.
         </p>
 
         <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-4">
@@ -97,16 +92,12 @@ export default async function HelloPage() {
           </h2>
 
           <p className="mb-4">
-            I&apos;m looking forward to connecting with you. Don&apos;t hesitate to reach out to me
-            for a meeting today.
+            I&apos;m looking forward to connecting with you. Don&apos;t hesitate to reach out to me for a meeting today.
           </p>
 
           <Link
             href="/contact"
-            className={cn(
-              "rounded-lg bg-neutral-600 px-3 py-2 transition-all",
-              "hover:bg-neutral-700"
-            )}
+            className={cn("rounded-lg bg-neutral-600 px-3 py-2 transition-all", "hover:bg-neutral-700")}
           >
             Contact me
           </Link>
@@ -117,5 +108,5 @@ export default async function HelloPage() {
 }
 
 export const metadata: Metadata = {
-  title: "Luc Le | lesor.dev",
+  title: "Luc Le | the-nero.space",
 };

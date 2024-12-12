@@ -83,7 +83,7 @@ export function Sidebar({ className }: SidebarProps) {
               <h1 className="flex items-center gap-2 text-xl font-bold">
                 Luc Le <Image src={BEAR_PINK_GIF} alt="thunderbolt-gif" className="size-6" />
               </h1>
-              <h2 className="font-medium text-neutral-500">@lesor_</h2>
+              <h2 className="font-medium text-neutral-500">@nero_</h2>
             </div>
           </div>
 

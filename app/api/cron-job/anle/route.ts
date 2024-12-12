@@ -36,12 +36,16 @@ export async function POST(request: NextRequest) {
 
   switch (action) {
     case "water-drink-reminder":
-      await axios.post("https://api.telegram.org/bot7085375476:AAEIzgkjJ7fMcuwmNWjrxprUptQSfT5AIxg/sendMessage", null, {
-        params: {
-          chat_id: ANLE_CHAT_ID,
-          text: sample(WATER_DRINK_REMINDER_MESSAGES),
-        },
-      });
+      await axios.post(
+        "https://api.telegram.org/bot7085375476:AAEIzgkjJ7fMcuwmNWjrxprUptQSfT5AIxg/sendMessage",
+        null,
+        {
+          params: {
+            chat_id: ANLE_CHAT_ID,
+            text: sample(WATER_DRINK_REMINDER_MESSAGES),
+          },
+        }
+      );
       break;
 
     default:

@@ -19,5 +19,5 @@ export default function Layout({ children }: PropsWithChildren) {
 }
 
 export const metadata: Metadata = {
-  title: "Luc Le | lesor.dev",
+  title: "Luc Le | the-nero.space",
 };
